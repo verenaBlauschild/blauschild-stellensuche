@@ -19,7 +19,7 @@
     .header {
       background: #003882;
       color: white;
-      padding: 20px 40px;
+      padding: 18px 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -30,13 +30,13 @@
     .header-left a {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
       text-decoration: none;
       color: white;
     }
 
     .logo {
-      height: 42px;
+      height: 44px;
       width: auto;
       display: block;
     }
@@ -44,18 +44,19 @@
     .header-text {
       display: flex;
       flex-direction: column;
+      line-height: 1.15;
     }
 
-    .header h1 {
+    .header-title {
+      font-size: 28px;
+      font-weight: 700;
       margin: 0;
-      font-size: 24px;
-      line-height: 1.1;
     }
 
     .subtitle {
       font-size: 14px;
       opacity: 0.9;
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
     .lang-switch {
@@ -201,14 +202,14 @@
       }
 
       .header-left a {
-        align-items: flex-start;
+        align-items: center;
       }
 
       .logo {
         height: 36px;
       }
 
-      .header h1 {
+      .header-title {
         font-size: 22px;
       }
 
@@ -228,9 +229,9 @@
   <div class="header">
     <div class="header-left">
       <a href="https://www.blauschild.it/" target="_blank" rel="noopener noreferrer">
-        <img src="logo-blauschild.png" alt="Blauschild" class="logo">
+        <img src="logo-blauschild.jpg" alt="Blauschild" class="logo">
         <div class="header-text">
-          <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
+          <div class="header-title" id="title">Offene Stellen</div>
           <div class="subtitle" id="subtitle">Jobs in den besten Werkstätten Südtirols</div>
         </div>
       </a>
@@ -261,9 +262,7 @@
       currentLang = lang;
 
       document.getElementById("title").innerText =
-        lang === "de"
-          ? "Offene Stellen – BLAUSCHILD"
-          : "Offerte di lavoro – BLAUSCHILD";
+        lang === "de" ? "Offene Stellen" : "Offerte di lavoro";
 
       document.getElementById("subtitle").innerText =
         lang === "de"
@@ -336,7 +335,7 @@
 
               <div class="contact-info">
                 ${email ? `✉ <a href="mailto:${email}">${email}</a><br>` : ""}
-                ${phone ? `📞 <a href="tel:${phone}">${phone}</a>` : ""}
+                ${phone ? `☎ <a href="tel:${phone}">${phone}</a>` : ""}
               </div>
             `;
 
