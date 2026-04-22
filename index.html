@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blauschild Stellensuche</title>
 
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 <style>
@@ -13,89 +13,186 @@ body {
     font-family: 'PT Sans', sans-serif;
     background: #f4f6f8;
     margin: 0;
+    color: #1a1a1a;
 }
 
 /* HEADER */
 .header {
-    background: #003882;
+    background: linear-gradient(90deg, #002d6f 0%, #003882 100%);
     color: white;
-    padding: 20px 40px;
+    padding: 22px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 22px;
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.88);
 }
 
 /* LANGUAGE SWITCH */
+.lang-switch {
+    display: flex;
+    gap: 8px;
+}
+
 .lang-switch button {
-    margin-left: 10px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border: none;
     cursor: pointer;
     background: white;
     color: #003882;
-    border-radius: 4px;
+    border-radius: 20px;
     font-weight: bold;
+    font-family: inherit;
+    transition: 0.2s ease;
+}
+
+.lang-switch button:hover {
+    transform: translateY(-1px);
+}
+
+/* INTRO */
+.hero {
+    max-width: 980px;
+    margin: 30px auto 10px auto;
+    padding: 0 20px;
+}
+
+.hero-box {
+    background: white;
+    border-left: 6px solid #003882;
+    border-radius: 10px;
+    padding: 24px 26px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.hero-box h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    color: #003882;
+}
+
+.hero-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 980px;
+    margin: 25px auto 40px auto;
     padding: 0 20px;
 }
 
 /* JOB CARD */
 .job {
     background: white;
-    padding: 22px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    border: 1px solid #e7ebf0;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
+    margin-bottom: 4px;
+    color: #1a1a1a;
 }
 
 .company {
-    color: #555;
-    margin-bottom: 10px;
+    color: #5b6572;
+    font-size: 17px;
+    margin-bottom: 12px;
 }
 
 .location {
-    margin-bottom: 10px;
-}
-
-.description {
-    margin: 10px 0;
+    margin-bottom: 12px;
+    color: #333;
 }
 
 .extra {
+    display: inline-block;
+    background: #eaf1fb;
+    color: #003882;
     font-weight: bold;
-    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.description {
+    margin: 8px 0 16px 0;
+    line-height: 1.55;
+    color: #222;
 }
 
 /* BUTTONS */
 .button {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     background: #003882;
     color: white;
     padding: 10px 14px;
     text-decoration: none;
     border-radius: 6px;
     margin-right: 10px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background: #002d6f;
 }
 
 .button.secondary {
     background: #e5e8ec;
     color: #003882;
+}
+
+.button.secondary:hover {
+    background: #d9dee5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .hero-box h2 {
+        font-size: 21px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
 }
 </style>
 
@@ -104,11 +201,24 @@ body {
 <body>
 
 <div class="header">
-    <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
+    <div class="header-left">
+        <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
+        <p class="subtitle" id="subtitle">Jobs in den besten Werkstätten Südtirols</p>
+    </div>
 
     <div class="lang-switch">
         <button onclick="setLang('de')">DE</button>
         <button onclick="setLang('it')">IT</button>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="hero-box">
+        <h2 id="heroTitle">Finde deinen Job in einer BLAUSCHILD-Werkstatt</h2>
+        <p id="heroText">
+            Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe.
+            Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb.
+        </p>
     </div>
 </div>
 
@@ -124,6 +234,21 @@ function setLang(lang) {
         lang === "de"
         ? "Offene Stellen – BLAUSCHILD"
         : "Offerte di lavoro – BLAUSCHILD";
+
+    document.getElementById("subtitle").innerText =
+        lang === "de"
+        ? "Jobs in den besten Werkstätten Südtirols"
+        : "Lavora nelle migliori officine dell’Alto Adige";
+
+    document.getElementById("heroTitle").innerText =
+        lang === "de"
+        ? "Finde deinen Job in einer BLAUSCHILD-Werkstatt"
+        : "Trova il tuo lavoro in un’officina BLAUSCHILD";
+
+    document.getElementById("heroText").innerText =
+        lang === "de"
+        ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe. Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb."
+        : "Qui trovi le offerte di lavoro attuali delle nostre officine BLAUSCHILD. Scopri le posizioni aperte e candidati direttamente presso l’azienda interessata.";
 
     loadJobs();
 }
@@ -175,14 +300,11 @@ function loadJobs() {
             div.innerHTML = `
                 <div class="title">${title || ""}</div>
                 <div class="company">${company || ""}</div>
-                <div class="location">${location || ""}</div>
-
-                <div class="extra">${extra || ""}</div>
-
+                <div class="location">${(location || "").replace(/\n/g,"<br>")}</div>
+                ${extra ? `<div class="extra">${extra}</div>` : ""}
                 <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
 
                 ${email ? `<a class="button" href="mailto:${email.trim()}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
-
                 ${phone ? `<a class="button secondary" href="tel:${phone.trim()}">${currentLang === "de" ? "Anrufen" : "Chiama"}</a>` : ""}
             `;
 
