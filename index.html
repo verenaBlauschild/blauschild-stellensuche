@@ -1,209 +1,363 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blauschild Stellensuche</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blauschild Stellensuche</title>
 
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-<style>
-body {
-    font-family: 'PT Sans', sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    color: #1a1a1a;
-}
+  <style>
+    body {
+      font-family: 'PT Sans', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      color: #1a1a1a;
+    }
 
-.header {
-    background: linear-gradient(90deg, #002d6f 0%, #003882 100%);
-    color: white;
-    padding: 22px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .header {
+      background: #003882;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.header-left {
-    display: flex;
-    flex-direction: column;
-}
+    .header-left a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: white;
+    }
 
-.header h1 {
-    margin: 0;
-    font-size: 26px;
-}
+    .logo {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
 
-.subtitle {
-    font-size: 14px;
-    opacity: 0.85;
-}
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
 
-.lang-switch button {
-    margin-left: 10px;
-    padding: 6px 12px;
-    border: none;
-    cursor: pointer;
-    background: white;
-    color: #003882;
-    border-radius: 20px;
-    font-weight: bold;
-}
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.1;
+    }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 3px;
+    }
 
-.job {
-    background: white;
-    padding: 22px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
 
-.title {
-    font-size: 20px;
-    font-weight: bold;
-}
+    .lang-switch button {
+      padding: 7px 12px;
+      border: none;
+      cursor: pointer;
+      background: white;
+      color: #003882;
+      border-radius: 18px;
+      font-weight: bold;
+      font-family: inherit;
+    }
 
-.company {
-    color: #555;
-    margin-bottom: 10px;
-}
+    .hero {
+      max-width: 980px;
+      margin: 30px auto 10px auto;
+      padding: 0 20px;
+    }
 
-.location {
-    margin-bottom: 10px;
-}
+    .hero-box {
+      background: white;
+      border-left: 6px solid #003882;
+      border-radius: 10px;
+      padding: 24px 26px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
 
-.extra {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #003882;
-}
+    .hero-box h2 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      color: #003882;
+    }
 
-.description {
-    margin: 10px 0;
-}
+    .hero-box p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #444;
+    }
 
-.button {
-    display: inline-block;
-    margin-top: 10px;
-    background: #003882;
-    color: white;
-    padding: 10px 14px;
-    text-decoration: none;
-    border-radius: 6px;
-    margin-right: 10px;
-}
-</style>
+    .container {
+      max-width: 980px;
+      margin: 25px auto 40px auto;
+      padding: 0 20px;
+    }
+
+    .job {
+      background: white;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      border: 1px solid #e7ebf0;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #1a1a1a;
+    }
+
+    .company {
+      color: #5b6572;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .location {
+      margin-bottom: 12px;
+      color: #333;
+      line-height: 1.45;
+    }
+
+    .extra {
+      display: inline-block;
+      background: #eaf1fb;
+      color: #003882;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .description {
+      margin: 8px 0 16px 0;
+      line-height: 1.55;
+      color: #222;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 8px;
+      background: #003882;
+      color: white;
+      padding: 10px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #002d6f;
+    }
+
+    .contact-info {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .contact-info a {
+      color: #003882;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .empty {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      text-align: center;
+      color: #666;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-left a {
+        align-items: flex-start;
+      }
+
+      .logo {
+        height: 36px;
+      }
+
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .hero-box h2 {
+        font-size: 21px;
+      }
+
+      .title {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">
+  <div class="header">
     <div class="header-left">
-        <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
-        <div class="subtitle" id="subtitle">Jobs in den besten Werkstätten Südtirols</div>
+      <a href="https://www.blauschild.it/" target="_blank" rel="noopener noreferrer">
+        <img src="logo-blauschild.png" alt="Blauschild" class="logo">
+        <div class="header-text">
+          <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
+          <div class="subtitle" id="subtitle">Jobs in den besten Werkstätten Südtirols</div>
+        </div>
+      </a>
     </div>
 
     <div class="lang-switch">
-        <button onclick="setLang('de')">DE</button>
-        <button onclick="setLang('it')">IT</button>
+      <button onclick="setLang('de')">DE</button>
+      <button onclick="setLang('it')">IT</button>
     </div>
-</div>
+  </div>
 
-<div class="container" id="jobs"></div>
+  <div class="hero">
+    <div class="hero-box">
+      <h2 id="heroTitle">Finde deinen Job in einer BLAUSCHILD-Werkstatt</h2>
+      <p id="heroText">
+        Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe.
+        Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb.
+      </p>
+    </div>
+  </div>
 
-<script>
-let currentLang = "de";
+  <div class="container" id="jobs"></div>
 
-function setLang(lang) {
-    currentLang = lang;
+  <script>
+    let currentLang = "de";
 
-    document.getElementById("title").innerText =
+    function setLang(lang) {
+      currentLang = lang;
+
+      document.getElementById("title").innerText =
         lang === "de"
-        ? "Offene Stellen – BLAUSCHILD"
-        : "Offerte di lavoro – BLAUSCHILD";
+          ? "Offene Stellen – BLAUSCHILD"
+          : "Offerte di lavoro – BLAUSCHILD";
 
-    document.getElementById("subtitle").innerText =
+      document.getElementById("subtitle").innerText =
         lang === "de"
-        ? "Jobs in den besten Werkstätten Südtirols"
-        : "Lavora nelle migliori officine dell’Alto Adige";
+          ? "Jobs in den besten Werkstätten Südtirols"
+          : "Lavora nelle migliori officine dell’Alto Adige";
 
-    loadJobs();
-}
+      document.getElementById("heroTitle").innerText =
+        lang === "de"
+          ? "Finde deinen Job in einer BLAUSCHILD-Werkstatt"
+          : "Trova il tuo lavoro in un’officina BLAUSCHILD";
 
-function loadJobs() {
+      document.getElementById("heroText").innerText =
+        lang === "de"
+          ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe. Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb."
+          : "Qui trovi le offerte di lavoro attuali delle nostre officine BLAUSCHILD. Scopri le posizioni aperte e candidati direttamente presso l’azienda interessata.";
 
-    fetch("jobs.csv")
-    .then(response => response.text())
-    .then(csv => {
+      loadJobs();
+    }
 
-        const parsed = Papa.parse(csv, {
+    function loadJobs() {
+      fetch("jobs.csv")
+        .then(response => response.text())
+        .then(csv => {
+          const parsed = Papa.parse(csv, {
             header: true,
             delimiter: ";",
             skipEmptyLines: true
-        });
+          });
 
-        const jobs = parsed.data;
-        const container = document.getElementById("jobs");
+          const jobs = parsed.data;
+          const container = document.getElementById("jobs");
+          container.innerHTML = "";
 
-        container.innerHTML = "";
+          let visibleJobs = 0;
 
-        jobs.forEach(job => {
-
+          jobs.forEach(job => {
             if (!job["Aktiv"] || job["Aktiv"].trim().toLowerCase() !== "ja") return;
 
             const title = currentLang === "de"
-                ? job["Jobtitel / Stellenbezeichnung_DE"]
-                : job["Jobtitel / Stellenbezeichnung_IT"];
+              ? job["Jobtitel / Stellenbezeichnung_DE"]
+              : job["Jobtitel / Stellenbezeichnung_IT"];
 
             const location = currentLang === "de"
-                ? job["Ort"]
-                : job["Ort_IT"];
+              ? job["Ort"]
+              : job["Ort_IT"];
 
             const description = currentLang === "de"
-                ? job["Stellenbeschreibung_DE"]
-                : job["Stellenbeschreibung_IT"];
+              ? job["Stellenbeschreibung_DE"]
+              : job["Stellenbeschreibung_IT"];
 
             const extra = currentLang === "de"
-                ? job["extra_DE"]
-                : job["extra_IT"];
+              ? job["extra_DE"]
+              : job["extra_IT"];
 
-            const email = job["contact_email"];
-            const phone = job["contact_tel"];
-            const company = job["Firmenname"];
+            const email = (job["contact_email"] || "").trim();
+            const phone = (job["contact_tel"] || "").trim();
+            const company = job["Firmenname"] || "";
 
             const div = document.createElement("div");
             div.className = "job";
 
             div.innerHTML = `
-                <div class="title">${title || ""}</div>
-                <div class="company">${company || ""}</div>
-                <div class="location">${(location || "").replace(/\n/g,"<br>")}</div>
-                ${extra ? `<div class="extra">${extra}</div>` : ""}
-                <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
+              <div class="title">${title || ""}</div>
+              <div class="company">${company}</div>
+              <div class="location">${(location || "").replace(/\n/g, "<br>")}</div>
+              ${extra ? `<div class="extra">${extra}</div>` : ""}
+              <div class="description">${(description || "").replace(/\n/g, "<br>")}</div>
 
-                ${email ? `<a class="button" href="mailto:${email.trim()}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
+              ${email ? `<a class="button" href="mailto:${email}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
 
-                <div style="margin-top:10px; font-size:14px; color:#444;">
-                    ${email ? `✉ <a href="mailto:${email.trim()}" style="color:#003882; text-decoration:none;">${email.trim()}</a><br>` : ""}
-                    ${phone ? `📞 <a href="tel:${phone.trim()}" style="color:#003882; text-decoration:none;">${phone.trim()}</a>` : ""}
-                </div>
+              <div class="contact-info">
+                ${email ? `✉ <a href="mailto:${email}">${email}</a><br>` : ""}
+                ${phone ? `📞 <a href="tel:${phone}">${phone}</a>` : ""}
+              </div>
             `;
 
             container.appendChild(div);
+            visibleJobs++;
+          });
+
+          if (visibleJobs === 0) {
+            container.innerHTML = `
+              <div class="empty">
+                ${currentLang === "de"
+                  ? "Derzeit sind keine offenen Stellen verfügbar."
+                  : "Al momento non ci sono posizioni aperte."}
+              </div>
+            `;
+          }
         });
+    }
 
-    });
-}
-
-loadJobs();
-</script>
+    loadJobs();
+  </script>
 
 </body>
 </html>
