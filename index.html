@@ -6,6 +6,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
 <style>
 body {
     font-family: 'PT Sans', sans-serif;
@@ -31,7 +33,7 @@ body {
 /* LANGUAGE SWITCH */
 .lang-switch button {
     margin-left: 10px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border: none;
     cursor: pointer;
     background: white;
@@ -50,16 +52,15 @@ body {
 /* JOB CARD */
 .job {
     background: white;
-    padding: 20px;
+    padding: 22px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .title {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .company {
@@ -69,20 +70,24 @@ body {
 
 .location {
     margin-bottom: 10px;
-    color: #333;
 }
 
 .description {
+    margin: 10px 0;
+}
+
+.extra {
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .button {
     display: inline-block;
     margin-top: 10px;
     background: #003882;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 14px;
     text-decoration: none;
     border-radius: 6px;
     margin-right: 10px;
@@ -100,6 +105,7 @@ body {
 
 <div class="header">
     <h1 id="title">Offene Stellen – BLAUSCHILD</h1>
+
     <div class="lang-switch">
         <button onclick="setLang('de')">DE</button>
         <button onclick="setLang('it')">IT</button>
@@ -115,56 +121,74 @@ function setLang(lang) {
     currentLang = lang;
 
     document.getElementById("title").innerText =
-        lang === "de" ? "Offene Stellen – BLAUSCHILD" : "Offerte di lavoro – BLAUSCHILD";
+        lang === "de"
+        ? "Offene Stellen – BLAUSCHILD"
+        : "Offerte di lavoro – BLAUSCHILD";
 
     loadJobs();
 }
 
 function loadJobs() {
-    fetch('jobs.csv')
-    .then(response => response.text())
-    .then(data => {
 
-        const rows = data.split('\n').slice(1);
-        const container = document.getElementById('jobs');
+    fetch("jobs.csv")
+    .then(response => response.text())
+    .then(csv => {
+
+        const parsed = Papa.parse(csv, {
+            header: true,
+            delimiter: ";",
+            skipEmptyLines: true
+        });
+
+        const jobs = parsed.data;
+        const container = document.getElementById("jobs");
+
         container.innerHTML = "";
 
-        rows.forEach(row => {
+        jobs.forEach(job => {
 
-            const cols = row.split(',');
+            if (!job["Aktiv"] || job["Aktiv"].trim().toLowerCase() !== "ja") return;
 
-            if (cols.length < 13) return;
+            const title = currentLang === "de"
+                ? job["Jobtitel / Stellenbezeichnung_DE"]
+                : job["Jobtitel / Stellenbezeichnung_IT"];
 
-            const active = cols[1].trim();
-            if (active !== "ja") return;
+            const location = currentLang === "de"
+                ? job["Ort"]
+                : job["Ort_IT"];
 
-            const company = cols[2];
+            const description = currentLang === "de"
+                ? job["Stellenbeschreibung_DE"]
+                : job["Stellenbeschreibung_IT"];
 
-            const title = currentLang === "de" ? cols[3] : cols[4];
-            const location = currentLang === "de" ? cols[5] : cols[6];
-            const description = currentLang === "de" ? cols[9] : cols[10];
-            const extra = currentLang === "de" ? cols[11] : cols[12];
+            const extra = currentLang === "de"
+                ? job["extra_DE"]
+                : job["extra_IT"];
 
-            const email = cols[7];
-            const phone = cols[8];
+            const email = job["contact_email"];
+            const phone = job["contact_tel"];
+            const company = job["Firmenname"];
 
-            const div = document.createElement('div');
-            div.className = 'job';
+            const div = document.createElement("div");
+            div.className = "job";
 
             div.innerHTML = `
-                <div class="title">${title}</div>
-                <div class="company">${company}</div>
-                <div class="location">${location}</div>
-                <div class="description">${description}</div>
-                <div><strong>${extra}</strong></div>
+                <div class="title">${title || ""}</div>
+                <div class="company">${company || ""}</div>
+                <div class="location">${location || ""}</div>
 
-                ${email ? `<a class="button" href="mailto:${email}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
+                <div class="extra">${extra || ""}</div>
 
-                ${phone ? `<a class="button secondary" href="tel:${phone}">${currentLang === "de" ? "Anrufen" : "Chiama"}</a>` : ""}
+                <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
+
+                ${email ? `<a class="button" href="mailto:${email.trim()}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
+
+                ${phone ? `<a class="button secondary" href="tel:${phone.trim()}">${currentLang === "de" ? "Anrufen" : "Chiama"}</a>` : ""}
             `;
 
             container.appendChild(div);
         });
+
     });
 }
 
