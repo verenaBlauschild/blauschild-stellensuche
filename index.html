@@ -1,194 +1,266 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blauschild Stellensuche</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blauschild Stellensuche</title>
 
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    margin: 0;
-    color: #1a1a1a;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      color: #1a1a1a;
+    }
 
-.header {
-    background: #003a8f;
-    color: white;
-    padding: 22px 28px;
-    font-size: 24px;
-    font-weight: bold;
-}
+    .header {
+      background: #003a8f;
+      color: white;
+      padding: 22px 28px;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-.container {
-    max-width: 1040px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+    .topbar {
+      max-width: 1040px;
+      margin: 24px auto 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-.job {
-    background: white;
-    padding: 24px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
 
-.title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
+    .lang-btn {
+      border: 1px solid #003a8f;
+      background: white;
+      color: #003a8f;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
 
-.company {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+    .lang-btn.active {
+      background: #003a8f;
+      color: white;
+    }
 
-.location {
-    margin-bottom: 14px;
-}
+    .container {
+      max-width: 1040px;
+      margin: 20px auto 40px auto;
+      padding: 0 20px;
+    }
 
-.extra {
-    font-weight: bold;
-    margin-bottom: 14px;
-}
+    .job {
+      background: white;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
 
-.description {
-    line-height: 1.5;
-    margin-bottom: 18px;
-}
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
 
-.contact-box {
-    border-top: 1px solid #e5e5e5;
-    padding-top: 14px;
-    margin-top: 14px;
-}
+    .company {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-.contact-line {
-    margin: 6px 0;
-}
+    .location {
+      margin-bottom: 14px;
+    }
 
-.contact-line a {
-    color: #003a8f;
-    text-decoration: none;
-    font-weight: 600;
-}
+    .extra {
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
 
-.contact-line a:hover {
-    text-decoration: underline;
-}
+    .description {
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
 
-.actions {
-    margin-top: 14px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+    .contact-box {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 14px;
+      margin-top: 14px;
+    }
 
-.button {
-    display: inline-block;
-    background: #003a8f;
-    color: white;
-    padding: 10px 16px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-}
+    .contact-line {
+      margin: 6px 0;
+    }
 
-.button:hover {
-    background: #002d6f;
-}
+    .contact-line a {
+      color: #003a8f;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.empty {
-    background: white;
-    padding: 24px;
-    border-radius: 10px;
-    text-align: center;
-}
-</style>
+    .contact-line a:hover {
+      text-decoration: underline;
+    }
+
+    .actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      background: #003a8f;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: #002d6f;
+    }
+
+    .empty {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="header">
+  <div class="header" id="pageTitle">
     Offene Stellen – BLAUSCHILD
-</div>
+  </div>
 
-<div class="container" id="jobs">
+  <div class="topbar">
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="btn-it" onclick="setLang('it')">IT</button>
+    </div>
+  </div>
+
+  <div class="container" id="jobs">
     <div class="empty">Stellen werden geladen...</div>
-</div>
+  </div>
 
-<script>
-fetch('jobs.csv')
-  .then(response => response.text())
-  .then(csvText => {
-    Papa.parse(csvText, {
-      header: true,
-      delimiter: ";",
-      skipEmptyLines: true,
-      complete: function(results) {
-        const container = document.getElementById('jobs');
-        container.innerHTML = "";
+  <script>
+    let currentLang = "de";
+    let jobsData = [];
 
-        let visibleCount = 0;
+    function setLang(lang) {
+      currentLang = lang;
 
-        results.data.forEach(job => {
-          const active = (job["Aktiv"] || "").trim().toLowerCase();
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-it").classList.toggle("active", lang === "it");
 
-          if (active !== "yes" && active !== "ja") return;
+      document.getElementById("pageTitle").textContent =
+        lang === "de"
+          ? "Offene Stellen – BLAUSCHILD"
+          : "Posizioni aperte – BLAUSCHILD";
 
-          const company = (job["Firmenname"] || "").trim();
-          const title = (job["Jobtitel / Stellenbezeichnung_DE"] || "").trim();
-          const location = (job["Ort"] || "").trim().replace(/\r?\n/g, ", ");
-          const email = (job["contact_email"] || "").trim();
-          const phone = (job["contact_tel"] || "").trim();
-          const description = (job["Stellenbeschreibung_DE"] || "").trim().replace(/\r?\n/g, "<br>");
-          const extra = (job["extra_DE"] || "").trim();
+      renderJobs();
+    }
 
-          const cleanEmail = email.replace(/\s+/g, "");
-          const phoneHref = phone.replace(/\s+/g, "");
+    function renderJobs() {
+      const container = document.getElementById("jobs");
+      container.innerHTML = "";
 
-          const div = document.createElement('div');
-          div.className = 'job';
+      let visibleCount = 0;
 
-          div.innerHTML = `
-            <div class="title">${title || "-"}</div>
-            <div class="company">${company || ""}</div>
-            ${location ? `<div class="location">${location}</div>` : ""}
-            ${extra ? `<div class="extra">${extra}</div>` : ""}
-            ${description ? `<div class="description">${description}</div>` : ""}
+      jobsData.forEach(job => {
+        const active = (job["Aktiv"] || "").trim().toLowerCase();
+        if (active !== "yes" && active !== "ja") return;
 
-            <div class="contact-box">
-              ${email ? `<div class="contact-line"><strong>E-Mail:</strong> <a href="mailto:${cleanEmail}">${email}</a></div>` : ""}
-              ${phone ? `<div class="contact-line"><strong>Tel.:</strong> <a href="tel:${phoneHref}">${phone}</a></div>` : ""}
+        const company = (job["Firmenname"] || "").trim();
 
-              <div class="actions">
-                ${email ? `<a class="button" href="mailto:${cleanEmail}">Jetzt bewerben</a>` : ""}
-              </div>
+        const title = currentLang === "de"
+          ? (job["Jobtitel / Stellenbezeichnung_DE"] || "").trim()
+          : (job["Jobtitel / Stellenbezeichnung_IT"] || "").trim();
+
+        const location = currentLang === "de"
+          ? (job["Ort"] || "").trim()
+          : (job["Ort_IT"] || "").trim();
+
+        const description = currentLang === "de"
+          ? (job["Stellenbeschreibung_DE"] || "").trim()
+          : (job["Stellenbeschreibung_IT"] || "").trim();
+
+        const extra = currentLang === "de"
+          ? (job["extra_DE"] || "").trim()
+          : (job["extra_IT"] || "").trim();
+
+        const email = (job["contact_email"] || "").trim();
+        const phone = (job["contact_tel"] || "").trim();
+
+        const cleanEmail = email.replace(/\s+/g, "");
+        const phoneHref = phone.replace(/\s+/g, "");
+
+        const div = document.createElement("div");
+        div.className = "job";
+
+        div.innerHTML = `
+          <div class="title">${title || "-"}</div>
+          <div class="company">${company || ""}</div>
+          ${location ? `<div class="location">${location.replace(/\r?\n/g, ", ")}</div>` : ""}
+          ${extra ? `<div class="extra">${extra}</div>` : ""}
+          ${description ? `<div class="description">${description.replace(/\r?\n/g, "<br>")}</div>` : ""}
+
+          <div class="contact-box">
+            ${email ? `<div class="contact-line"><strong>E-Mail:</strong> <a href="mailto:${cleanEmail}">${email}</a></div>` : ""}
+            ${phone ? `<div class="contact-line"><strong>Tel.:</strong> <a href="tel:${phoneHref}">${phone}</a></div>` : ""}
+
+            <div class="actions">
+              ${email ? `<a class="button" href="mailto:${cleanEmail}">${currentLang === "de" ? "Jetzt bewerben" : "Candidati ora"}</a>` : ""}
             </div>
-          `;
+          </div>
+        `;
 
-          container.appendChild(div);
-          visibleCount++;
-        });
+        container.appendChild(div);
+        visibleCount++;
+      });
 
-        if (visibleCount === 0) {
-          container.innerHTML = '<div class="empty">Derzeit sind keine offenen Stellen verfügbar.</div>';
-        }
+      if (visibleCount === 0) {
+        container.innerHTML = `<div class="empty">${
+          currentLang === "de"
+            ? "Derzeit sind keine offenen Stellen verfügbar."
+            : "Al momento non ci sono posizioni aperte."
+        }</div>`;
       }
-    });
-  })
-  .catch(error => {
-    document.getElementById('jobs').innerHTML =
-      '<div class="empty">Fehler beim Laden der Stellenanzeigen.</div>';
-    console.error(error);
-  });
-</script>
+    }
+
+    fetch("jobs.csv")
+      .then(response => response.text())
+      .then(csvText => {
+        Papa.parse(csvText, {
+          header: true,
+          delimiter: ";",
+          skipEmptyLines: true,
+          complete: function(results) {
+            jobsData = results.data;
+            renderJobs();
+          }
+        });
+      })
+      .catch(error => {
+        document.getElementById("jobs").innerHTML =
+          '<div class="empty">Fehler beim Laden der Stellenanzeigen.</div>';
+        console.error(error);
+      });
+  </script>
 
 </body>
 </html>
