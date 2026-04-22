@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Blauschild Stellensuche</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+}
+
+.header {
+    background: #003a8f;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.job {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.company {
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    background: #003a8f;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    Offene Stellen – BLAUSCHILD
+</div>
+
+<div class="container" id="jobs"></div>
+
+<script>
+fetch('jobs.csv')
+.then(response => response.text())
+.then(data => {
+
+    const rows = data.split('\n').slice(1);
+
+    rows.forEach(row => {
+
+        const cols = row.split(',');
+
+        if (cols.length < 5) return;
+
+        const active = cols[1];
+
+        if (active !== "yes") return;
+
+        const company = cols[2];
+        const title = cols[3];
+        const location = cols[5];
+        const email = cols[7];
+        const description = cols[9];
+
+        const div = document.createElement('div');
+        div.className = 'job';
+
+        div.innerHTML = `
+            <div class="title">${title}</div>
+            <div class="company">${company}</div>
+            <div>${location}</div>
+            <p>${description}</p>
+            <a class="button" href="mailto:${email}">Jetzt bewerben</a>
+        `;
+
+        document.getElementById('jobs').appendChild(div);
+    });
+});
+</script>
+
+</body>
+</html>
