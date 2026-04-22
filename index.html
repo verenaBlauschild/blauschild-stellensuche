@@ -2,9 +2,9 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blauschild Stellensuche</title>
 
-<!-- Libreria per leggere CSV correttamente -->
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 <style>
@@ -12,48 +12,105 @@ body {
     font-family: Arial, sans-serif;
     background: #f4f6f8;
     margin: 0;
+    color: #1a1a1a;
 }
 
 .header {
     background: #003a8f;
     color: white;
-    padding: 20px;
+    padding: 22px 28px;
     font-size: 24px;
+    font-weight: bold;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1040px;
     margin: 40px auto;
+    padding: 0 20px;
 }
 
 .job {
     background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .title {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 6px;
 }
 
 .company {
     color: #555;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.location {
+    margin-bottom: 14px;
+}
+
+.extra {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.description {
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.contact-box {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 14px;
+    margin-top: 14px;
+}
+
+.contact-line {
+    margin: 6px 0;
+}
+
+.contact-line a {
+    color: #003a8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-line a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .button {
     display: inline-block;
-    margin-top: 10px;
     background: #003a8f;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 16px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: #002d6f;
+}
+
+.empty {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
 }
 </style>
-
 </head>
 
 <body>
@@ -62,55 +119,75 @@ body {
     Offene Stellen – BLAUSCHILD
 </div>
 
-<div class="container" id="jobs"></div>
+<div class="container" id="jobs">
+    <div class="empty">Stellen werden geladen...</div>
+</div>
 
 <script>
 fetch('jobs.csv')
   .then(response => response.text())
   .then(csvText => {
-
     Papa.parse(csvText, {
       header: true,
       delimiter: ";",
       skipEmptyLines: true,
-
       complete: function(results) {
-
         const container = document.getElementById('jobs');
+        container.innerHTML = "";
+
+        let visibleCount = 0;
 
         results.data.forEach(job => {
-
           const active = (job["Aktiv"] || "").trim().toLowerCase();
 
-          // mostra solo attivi
           if (active !== "yes" && active !== "ja") return;
 
           const company = (job["Firmenname"] || "").trim();
           const title = (job["Jobtitel / Stellenbezeichnung_DE"] || "").trim();
           const location = (job["Ort"] || "").trim().replace(/\r?\n/g, ", ");
-          const email = (job["Kontakt_Email"] || "").trim();
-          const phone = (job["Kontakt_Tel"] || "").trim();
+          const email = (job["contact_email"] || "").trim();
+          const phone = (job["contact_tel"] || "").trim();
           const description = (job["Stellenbeschreibung_DE"] || "").trim().replace(/\r?\n/g, "<br>");
           const extra = (job["extra_DE"] || "").trim();
+
+          const cleanEmail = email.replace(/\s+/g, "");
+          const phoneHref = phone.replace(/\s+/g, "");
 
           const div = document.createElement('div');
           div.className = 'job';
 
           div.innerHTML = `
-            <div class="title">${title}</div>
-            <div class="company">${company}</div>
-            <div>${location}</div>
-            ${extra ? `<p><strong>${extra}</strong></p>` : ""}
-            ${description ? `<p>${description}</p>` : ""}
-            ${phone ? `<p>Tel: ${phone}</p>` : ""}
-            ${email ? `<a class="button" href="mailto:${email}">Jetzt bewerben</a>` : ""}
+            <div class="title">${title || "-"}</div>
+            <div class="company">${company || ""}</div>
+            ${location ? `<div class="location">${location}</div>` : ""}
+            ${extra ? `<div class="extra">${extra}</div>` : ""}
+            ${description ? `<div class="description">${description}</div>` : ""}
+
+            <div class="contact-box">
+              ${email ? `<div class="contact-line"><strong>E-Mail:</strong> <a href="mailto:${cleanEmail}">${email}</a></div>` : ""}
+              ${phone ? `<div class="contact-line"><strong>Tel.:</strong> <a href="tel:${phoneHref}">${phone}</a></div>` : ""}
+
+              <div class="actions">
+                ${email ? `<a class="button" href="mailto:${cleanEmail}">Jetzt bewerben</a>` : ""}
+              </div>
+            </div>
           `;
 
           container.appendChild(div);
+          visibleCount++;
         });
+
+        if (visibleCount === 0) {
+          container.innerHTML = '<div class="empty">Derzeit sind keine offenen Stellen verfügbar.</div>';
+        }
       }
     });
-});
+  })
+  .catch(error => {
+    document.getElementById('jobs').innerHTML =
+      '<div class="empty">Fehler beim Laden der Stellenanzeigen.</div>';
+    console.error(error);
+  });
 </script>
 
 </body>
