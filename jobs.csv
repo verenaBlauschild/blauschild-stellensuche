@@ -1,15 +1,15 @@
-﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;contact_email;contact_tel;apply_link
+﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo
 1;YES;Karosserie Kaserer;Karosserietechniker;Tecnico di carrozzeria;"Binderweg 8
 I-39011 Lana (BZ)";"Binderweg 8
-I-39011 Lana (BZ)";info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operatore qualificato;kaserer.jpg;;;
-2;YES;Sportgarage GmbH;qualifizierter Mechaniker;meccanico qualificato;I-39012 Meran/o (BZ) - Via Max Valier Str. 7;I-39012 Meran/o (BZ) - Via Max Valier Str. 7;service@sportgarage.it;0473 273300;abgeschlossene Lehre mit Gesellenbrief;Apprendistato completato con attestato di qualifica professionale;Kfz-Techniker;Tecnico automobilistico;sportgarage.jpg;;;
-3;YES;Sportgarage GmbH;Lehrling Mechaniker;Apprendista meccanico;I-39012 Meran/o (BZ) - Via Max Valier Str. 8;I-39012 Meran/o (BZ) - Via Max Valier Str. 8;service@sportgarage.it;0473 273300;Lehrling;Apprendista;Lehre als Kfz-Techniker;Apprendistato come tecnico auto;sportgarage.jpg;;;
+I-39011 Lana (BZ)";info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operatore qualificato;kaserer.jpg
+2;YES;Sportgarage GmbH;qualifizierter Mechaniker;meccanico qualificato;I-39012 Meran/o (BZ) - Via Max Valier Str. 7;I-39012 Meran/o (BZ) - Via Max Valier Str. 7;service@sportgarage.it;0473 273300;abgeschlossene Lehre mit Gesellenbrief;Apprendistato completato con attestato di qualifica professionale;Kfz-Techniker;Tecnico automobilistico;sportgarage.jpg
+3;YES;Sportgarage GmbH;Lehrling Mechaniker;Apprendista meccanico;I-39012 Meran/o (BZ) - Via Max Valier Str. 8;I-39012 Meran/o (BZ) - Via Max Valier Str. 8;service@sportgarage.it;0473 273300;Lehrling;Apprendista;Lehre als Kfz-Techniker;Apprendistato come tecnico auto;sportgarage.jpg
 4;YES;Sportgarage GmbH;Reifenmonteur + Fahrzeugaufbereiter;Montatore di pneumatici + Addetto alla preparazione dei veicoli;I-39012 Meran/o (BZ) - Via Max Valier Str. 9;I-39012 Meran/o (BZ) - Via Max Valier Str. 9;service@sportgarage.it;0473 273300;"handwerkliches Geschick
 Hauptaufgaben: Reifen montieren, Neufahrzeuge und Gebrauchtwagen aufbereiten, Innen- und Außenreinigung von Fahrzeugen, allfällige Kleinaufgaben wie z.B. Austausch Lampe/Scheibenwischer";"Abilità manuali
-Mansioni principali: montaggio di pneumatici, preparazione di veicoli nuovi e usati, pulizia interna ed esterna dei veicoli, eventuali piccoli lavori come ad esempio la sostituzione di lampadine/tergicristalli";Reifenmonteur;Gommista ;sportgarage.jpg;;;
+Mansioni principali: montaggio di pneumatici, preparazione di veicoli nuovi e usati, pulizia interna ed esterna dei veicoli, eventuali piccoli lavori come ad esempio la sostituzione di lampadine/tergicristalli";Reifenmonteur;Gommista ;sportgarage.jpg
 5;YES;Alpengarage;Mechaniker oder Lehrling im 3-4 Jahr;Meccanico o apprendista al 3°-4° anno;"39031 BRUNECK – BRUNICO
 St. Lorenzner Str. 35/b – Via S. Lorenzo 35/b";"39031 BRUNECK – BRUNICO
-St. Lorenzner Str. 35/b – Via S. Lorenzo 35/b";vendita@alpengarage.com;0474 555516 (Herr Klaus Mutschlechner);Bereits Kenntnisse im Fachbereich;Conoscenze pregresse nel settore;KFZ Mechatroniker oder Lehrling;Tecnico meccatronico auto o apprendista;alpengaragebruneck.jpg;;;
+St. Lorenzner Str. 35/b – Via S. Lorenzo 35/b";vendita@alpengarage.com;0474 555516 (Herr Klaus Mutschlechner);Bereits Kenntnisse im Fachbereich;Conoscenze pregresse nel settore;KFZ Mechatroniker oder Lehrling;Tecnico meccatronico auto o apprendista;alpengaragebruneck.jpg
 6;YES;Auto Hofer;Serviceberater (m/w);Consulente di assistenza (m/f);Spitalwiese 21, 39043 Klausen;Spitalwiese 21, 39043 Klausen; job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Koordination der Werkstatttermine mit unseren Kunden
 •	Annahme der Kundenfahrzeuge und Auftragseröffnung 
@@ -40,7 +40,7 @@ Requisiti:
 •    Metodo di lavoro organizzato, concentrato e orientato agli obiettivi 
 •    Competenza tecnica nel settore automobilistico (formazione come meccanico auto costituisce titolo preferenziale)
 
-";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;;;
+";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg
 7;YES;Auto Hofer;Mitarbeiter Arbeitsvorbereitung (m/w);Addetto alla pianificazione del lavoro (m/f);Spitalwiese 21, 39043 Klausen;Spitalwiese 21, 39043 Klausen; job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Zusammenstellen aller relevanten Unterlagen für den Serviceberater (Arbeitsaufträge, Checklisten, Prüfpläne u. dgl.)
 •	Prüfung der Verfügbarkeit von Ersatzteilen und Zubehör
@@ -63,7 +63,7 @@ Anforderungen:
 Requisiti: 
 •    Buona conoscenza del tedesco e dell'italiano
 •    Ottima padronanza del computer
-•    Metodo di lavoro organizzato, concentrato e affidabile";Fachkraft / auch Ausbildung im Betrieb möglich;Personale qualificato / possibilità di formazione in azienda;autohofer.jpg;;;
+•    Metodo di lavoro organizzato, concentrato e affidabile";Fachkraft / auch Ausbildung im Betrieb möglich;Personale qualificato / possibilità di formazione in azienda;autohofer.jpg
 8;YES;Auto Hofer;Kfz-Mechaniker (m/w);Meccanico (m/f);Spitalwiese 21, 39043 Klausen;Spitalwiese 21, 39043 Klausen; job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Die Instandhaltung und Reparatur von Fahrzeugen
 
@@ -76,7 +76,7 @@ Anforderungen:
 Requisiti: 
 •    Resistenza allo stress, flessibilità e approccio orientato alle soluzioni
 •    Interesse a conoscere il mondo dei marchi VW, SEAT, Škoda e VW Veicoli Commerciali
-•    Capacità di lavorare in squadra";Fachkraft / Gesellenbrief;Operatore qualificato / Diploma di qualifica professionale;autohofer.jpg;;;
+•    Capacità di lavorare in squadra";Fachkraft / Gesellenbrief;Operatore qualificato / Diploma di qualifica professionale;autohofer.jpg
 9;YES;Auto Hofer;Bürolehrling / Empfang (m/w);Apprendista d'ufficio / Addetto/a alla reception (m/f);Spitalwiese 21, 39043 Klausen;Spitalwiese 21, 39043 Klausen; job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Betreuung unserer Verkaufskunden und Sicherstellung eines rundum positiven Kundenerlebnisses
 •	Telefonzentrale für den Service und Verkauf
@@ -102,7 +102,7 @@ Requisiti:
 •    Buona conoscenza del tedesco e dell'italiano
 •    Buona padronanza del computer
 •    Metodo di lavoro organizzato, concentrato e affidabile
-";Lehre / Ausbildung im Betrieb;Formazione / Apprendistato in azienda;autohofer.jpg;;;
+";Lehre / Ausbildung im Betrieb;Formazione / Apprendistato in azienda;autohofer.jpg
 10;YES;Auto Hofer;Teamassistenz / Empfang (m/w);Assistente di squadra / Addetto/a alla reception (m/f);Spitalwiese 21, 39043 Klausen;Spitalwiese 21, 39043 Klausen; job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Betreuung unserer Verkaufskunden und Sicherstellung eines rundum positiven Kundenerlebnisses
 •	Telefonzentrale für den Service und Verkauf
@@ -129,65 +129,65 @@ Requisiti:
 •    Buona padronanza del computer
 •    Metodo di lavoro organizzato, concentrato e affidabile
  
-";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;;;
-11;YES;Karosserie Huber Bruneck;Karosserietechniker / Spengler;Tecnico di carrozzeria / Lamierista;Via J.-G.-Mahl-Str. 4 | 39031 Bruneck / Brunico ;Via J.-G.-Mahl-Str. 4 | 39031 Bruneck / Brunico ;manfred@huber.srl;;wenn möglich abgeschlossene Lehre;se possibile, aver completato un apprendistato;Fachkraft;Operatore specializzato;huber.jpg;;;
+";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg
+11;YES;Karosserie Huber Bruneck;Karosserietechniker / Spengler;Tecnico di carrozzeria / Lamierista;Via J.-G.-Mahl-Str. 4 | 39031 Bruneck / Brunico ;Via J.-G.-Mahl-Str. 4 | 39031 Bruneck / Brunico ;manfred@huber.srl;;wenn möglich abgeschlossene Lehre;se possibile, aver completato un apprendistato;Fachkraft;Operatore specializzato;huber.jpg
 12;YES;Garage Europa;Mechaniker;meccanico;"Eisackstraße 1 / Via dell’Isarco 1
 I-39049 Pfitsch / Val di Vizze (BZ)";"Eisackstraße 1 / Via dell’Isarco 1
-I-39049 Pfitsch / Val di Vizze (BZ)";info@garageeuropa.it; 0472 765587;KFZ-Mechatroniker;Tecnico della meccanica automobilistica;Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;garageeuropa.jpg;;;
+I-39049 Pfitsch / Val di Vizze (BZ)";info@garageeuropa.it; 0472 765587;KFZ-Mechatroniker;Tecnico della meccanica automobilistica;Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;garageeuropa.jpg
 13;YES;Auto Sarntal OHG;Karosseriespengler;Carrozziere;"Handwerkerzone 15 Zona artigianale
 39058 Sarntal/Sarentino";"Handwerkerzone 15 Zona artigianale
-39058 Sarntal/Sarentino";sarah@autosarntal.com; 335 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg;;;
+39058 Sarntal/Sarentino";sarah@autosarntal.com; 335 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg
 14;YES;Auto Sarntal OHG;Lackierer;verniciatore;"Handwerkerzone 15 Zona artigianale
 39058 Sarntal/Sarentino";"Handwerkerzone 15 Zona artigianale
-39058 Sarntal/Sarentino";sarah@autosarntal.com; 336 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg;;;
+39058 Sarntal/Sarentino";sarah@autosarntal.com; 336 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg
 15;YES;Auto Sarntal OHG;Mechaniker;meccanico;"Handwerkerzone 15 Zona artigianale
 39058 Sarntal/Sarentino";"Handwerkerzone 15 Zona artigianale
-39058 Sarntal/Sarentino";sarah@autosarntal.com; 337 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg;;;
+39058 Sarntal/Sarentino";sarah@autosarntal.com; 337 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;operaio qualificato;autosarntal.jpg
 16;YES;Karosserie Leitner;Lehrlinge;apprendista;"Fabrikstraße 1
 I-39031 Bruneck (BZ)";"Fabrikstraße 1
-I-39031 Bruneck (BZ)";info@leitner-r.eu; 0474 552286;Karosserie + Lackierer;Carrozzeria + Verniciatura;Grundlehrgang;Corso base;leitner.jpg;;;
+I-39031 Bruneck (BZ)";info@leitner-r.eu; 0474 552286;Karosserie + Lackierer;Carrozzeria + Verniciatura;Grundlehrgang;Corso base;leitner.jpg
 17;YES;Auto Freitag;Mitarbeiter/in für die Annahme;Addetto/a al ricevimento;"Passeirer Straße 80 
 39015  St Leonhard in P. (BZ)";"Passeirer Straße 80 
 39015  St Leonhard in P. (BZ)";ulli@autofreitag.it;393 1977204 (Ulli);"Kenntnisse im Autosektor
 Mecchaniker bevorzugt
 Gesucht wird eine Person mit Kenntnissen im Autosektor für die Annahme sowie Ersatzteilbestellung";"Conoscenze nel settore automobilistico
 Preferibilmente meccanico
-Si cerca una persona con conoscenze nel settore automobilistico per l'accettazione della merce e l'ordinazione dei ricambi";Annahme;Accettazione;autofreitag.jpg;;;
+Si cerca una persona con conoscenze nel settore automobilistico per l'accettazione della merce e l'ordinazione dei ricambi";Annahme;Accettazione;autofreitag.jpg
 18;YES;Alpin Racing Garage MC GmbH;2 Mechaniniker;2 meccanici;"Via San Maurizio, 88
 Bolzano - 39100 (BZ)";"Via San Maurizio, 88
 Bolzano - 39100 (BZ)"; info@alpinracing.it;;"Wir suchen aktuell nach Mechanikern mit beendeter Lehre.
 Sie sollten selbstständig arbeiten können und natürlich motiviert sein, besser zu werden.
 Da sie bei uns vom Oldtimer bis zum Rennwagen alle Fahrzeuge und Arbeiten reparieren können sollten.";"Al momento stiamo cercando meccanici che abbiano completato l'apprendistato.
 Dovete essere in grado di lavorare in autonomia ed essere, ovviamente, motivati a migliorare.
-Da noi dovrete essere in grado di riparare tutti i tipi di veicoli, dalle auto d'epoca alle auto da corsa, e svolgere ogni tipo di intervento.";Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;alpinracing.jpg;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
+Da noi dovrete essere in grado di riparare tutti i tipi di veicoli, dalle auto d'epoca alle auto da corsa, e svolgere ogni tipo di intervento.";Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;alpinracing.jpg
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
