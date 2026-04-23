@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blauschild Stellensuche</title>
 
-  <!-- PT Sans -->
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <style>
-    /* ROGUE FONT */
     @font-face {
       font-family: 'RogueSans';
       src: url('Device%20-%20RogueSans-Medium.otf') format('opentype');
@@ -27,7 +23,6 @@
       color: #1a1a1a;
     }
 
-    /* HEADER */
     .topbar {
       background: white;
       border-bottom: 1px solid #e6e9ee;
@@ -65,7 +60,6 @@
       background: #f4f8fc;
     }
 
-    /* LAYOUT */
     .page-wrap {
       max-width: 980px;
       margin: 36px auto;
@@ -251,7 +245,8 @@
           let visible = 0;
 
           parsed.data.forEach(job => {
-            if (!job["Aktiv"] || job["Aktiv"].toLowerCase() !== "ja") return;
+            const aktiv = (job["Aktiv"] || "").toLowerCase().trim();
+            if (aktiv !== "ja" && aktiv !== "yes") return;
 
             const title = currentLang === "de"
               ? job["Jobtitel / Stellenbezeichnung_DE"]
@@ -283,8 +278,8 @@
 
             div.innerHTML = `
               ${logo ? `<img src="logos/${logo}" class="job-logo" alt="${company}">` : ""}
-              <div class="title">${title}</div>
-              <div class="company">${company}</div>
+              <div class="title">${title || ""}</div>
+              <div class="company">${company || ""}</div>
               <div class="location">${(location || "").replace(/\n/g,"<br>")}</div>
               ${extra ? `<div class="extra">${extra}</div>` : ""}
               <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
