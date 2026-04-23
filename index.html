@@ -20,7 +20,6 @@
       font-style: normal;
     }
 
-    /* BASE */
     body {
       font-family: 'PT Sans', sans-serif;
       background: #f4f6f8;
@@ -81,23 +80,22 @@
       margin-bottom: 26px;
     }
 
-    /* 🔥 ROGUE SOLO QUI */
+    /* 🔥 TITOLI */
     .page-intro h1 {
-      margin: 0 0 10px 0;
       font-size: 2.5rem;
-      line-height: 1.2;
-      color: #243648;
-      font-weight: 500;
       font-family: 'RogueSans', sans-serif;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+      color: #243648;
     }
 
-   .page-intro p {
-  margin: 0;
-  font-size: 16px;
-  color: #4a5563;
-  line-height: 1.5;
-  max-width: 700px;
-}
+    .page-intro p {
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 850px; /* 👈 evita troppo a capo */
+      margin: 0;
+      color: #4a5563;
+    }
 
     .job {
       background: white;
@@ -108,11 +106,10 @@
       border: 1px solid #e7ebf0;
     }
 
-    /* 🔥 ROGUE SOLO TITOLI ANNUNCI */
     .title {
       font-size: 22px;
-      font-weight: 500;
       font-family: 'RogueSans', sans-serif;
+      font-weight: 500;
       margin-bottom: 4px;
     }
 
@@ -139,7 +136,7 @@
       margin: 10px 0;
     }
 
-    /* 🔥 ROGUE SOLO BUTTON */
+    /* 🔥 BUTTON */
     .button {
       display: inline-block;
       background: #003882;
@@ -147,8 +144,8 @@
       padding: 10px 14px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: 500;
       font-family: 'RogueSans', sans-serif;
+      font-weight: 500;
       margin-top: 8px;
     }
 
@@ -184,7 +181,6 @@
       background: white;
       border-radius: 10px;
     }
-
   </style>
 </head>
 
@@ -271,6 +267,10 @@
             const phone = job["contact_tel"];
             const company = job["Firmenname"];
 
+            const buttonText = currentLang === "de"
+              ? "Jetzt bewerben"
+              : "Candidati ora";
+
             const div = document.createElement("div");
             div.className = "job";
 
@@ -281,7 +281,7 @@
               ${extra ? `<div class="extra">${extra}</div>` : ""}
               <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
 
-              ${email ? `<a class="button" href="mailto:${email}">Jetzt bewerben</a>` : ""}
+              ${email ? `<a class="button" href="mailto:${email}">${buttonText}</a>` : ""}
 
               <div class="contact-info">
                 ${email ? `<span class="contact-line"><span class="icon-blue">✉</span> <a href="mailto:${email}">${email}</a></span>` : ""}
@@ -294,7 +294,13 @@
           });
 
           if (!visible) {
-            container.innerHTML = `<div class="empty">Keine Stellen verfügbar</div>`;
+            container.innerHTML = `
+              <div class="empty">
+                ${currentLang === "de"
+                  ? "Derzeit sind keine offenen Stellen verfügbar."
+                  : "Al momento non ci sono posizioni aperte."}
+              </div>
+            `;
           }
         });
     }
