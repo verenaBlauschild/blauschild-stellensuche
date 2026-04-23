@@ -8,10 +8,9 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <style>
-    /* 🔥 FONT PERSONALIZZATO */
     @font-face {
       font-family: 'RogueSans';
-      src: url('RogueSans-Medium.otf') format('opentype');
+      src: url('Device%20-%20RogueSans-Medium.otf') format('opentype');
       font-weight: 500;
       font-style: normal;
     }
@@ -23,7 +22,6 @@
       color: #1a1a1a;
     }
 
-    /* HEADER */
     .topbar {
       background: white;
       border-bottom: 1px solid #e6e9ee;
@@ -34,8 +32,13 @@
       flex-wrap: wrap;
     }
 
+    .topbar-left a {
+      display: flex;
+      align-items: center;
+    }
+
     .logo {
-      width: 260px;
+      width: 280px;
       height: auto;
     }
 
@@ -61,7 +64,6 @@
       background: #f4f8fc;
     }
 
-    /* CONTENT */
     .page-wrap {
       max-width: 980px;
       margin: 36px auto;
@@ -76,23 +78,22 @@
       margin-bottom: 26px;
     }
 
-    /* 🔥 TITOLO IDENTICO AL SITO */
     .page-intro h1 {
       margin: 0 0 10px 0;
       font-size: 2.5rem;
       line-height: 1.2;
       color: #243648;
       font-weight: 500;
-      font-family: 'RogueSans', sans-serif;
+      font-family: 'RogueSans', Arial, sans-serif;
     }
 
     .page-intro p {
       margin: 0;
       font-size: 18px;
       color: #4a5563;
+      font-family: Arial, sans-serif;
     }
 
-    /* JOB CARD */
     .job {
       background: white;
       padding: 24px;
@@ -105,17 +106,19 @@
     .title {
       font-size: 22px;
       font-weight: 500;
-      font-family: 'RogueSans', sans-serif;
+      font-family: 'RogueSans', Arial, sans-serif;
       margin-bottom: 4px;
     }
 
     .company {
       color: #5b6572;
       margin-bottom: 10px;
+      font-family: Arial, sans-serif;
     }
 
     .location {
       margin-bottom: 10px;
+      font-family: Arial, sans-serif;
     }
 
     .extra {
@@ -126,10 +129,12 @@
       border-radius: 20px;
       font-size: 14px;
       margin-bottom: 10px;
+      font-family: Arial, sans-serif;
     }
 
     .description {
       margin: 10px 0;
+      font-family: Arial, sans-serif;
     }
 
     .button {
@@ -140,7 +145,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 500;
-      font-family: 'RogueSans', sans-serif;
+      font-family: 'RogueSans', Arial, sans-serif;
       margin-top: 8px;
     }
 
@@ -151,6 +156,7 @@
     .contact-info {
       margin-top: 10px;
       line-height: 1.8;
+      font-family: Arial, sans-serif;
     }
 
     .contact-info a {
@@ -158,11 +164,24 @@
       text-decoration: none;
     }
 
+    .contact-line {
+      display: block;
+      margin-top: 4px;
+      color: #003882;
+    }
+
+    .icon-blue {
+      color: #003882;
+      display: inline-block;
+      width: 18px;
+    }
+
     .empty {
       text-align: center;
       padding: 20px;
       background: white;
       border-radius: 10px;
+      font-family: Arial, sans-serif;
     }
 
   </style>
@@ -170,11 +189,12 @@
 
 <body>
 
-  <!-- HEADER -->
   <div class="topbar">
-    <a href="https://www.blauschild.it/" target="_blank">
-      <img src="logo-blauschild.jpg" class="logo">
-    </a>
+    <div class="topbar-left">
+      <a href="https://www.blauschild.it/" target="_blank" rel="noopener noreferrer">
+        <img src="logo-blauschild.jpg" class="logo" alt="Blauschild">
+      </a>
+    </div>
 
     <div class="lang-switch">
       <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
@@ -182,12 +202,12 @@
     </div>
   </div>
 
-  <!-- CONTENT -->
   <div class="page-wrap">
     <div class="page-intro">
       <h1 id="pageTitle">Offene Stellen</h1>
       <p id="pageText">
         Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe.
+        Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb.
       </p>
     </div>
 
@@ -208,8 +228,8 @@
 
       document.getElementById("pageText").innerText =
         lang === "de"
-          ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe."
-          : "Qui trovi le offerte di lavoro attuali delle officine BLAUSCHILD.";
+          ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe. Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb."
+          : "Qui trovi le offerte di lavoro attuali delle officine BLAUSCHILD. Scopri le posizioni aperte e candidati direttamente presso l’azienda interessata.";
 
       loadJobs();
     }
@@ -265,8 +285,8 @@
               ${email ? `<a class="button" href="mailto:${email}">Jetzt bewerben</a>` : ""}
 
               <div class="contact-info">
-                ${email ? `✉ <a href="mailto:${email}">${email}</a><br>` : ""}
-                ${phone ? `☎ <a href="tel:${phone}">${phone}</a>` : ""}
+                ${email ? `<span class="contact-line"><span class="icon-blue">✉</span> <a href="mailto:${email}">${email}</a></span>` : ""}
+                ${phone ? `<span class="contact-line"><span class="icon-blue">☎</span> <a href="tel:${phone}">${phone}</a></span>` : ""}
               </div>
             `;
 
