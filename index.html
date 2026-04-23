@@ -1,235 +1,307 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blauschild Stellensuche</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blauschild Stellensuche</title>
 
-<!-- FONT BASE -->
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'RogueSans';
+      src: url('Device%20-%20RogueSans-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
 
-<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      color: #1a1a1a;
+    }
 
-@font-face {
-  font-family: 'RogueSans';
-  src: url('RogueSans-Medium.otf') format('opentype');
-  font-weight: 500;
-}
+    .topbar {
+      background: white;
+      border-bottom: 1px solid #e6e9ee;
+      padding: 20px 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-body {
-  font-family: 'PT Sans', sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-  color: #1a1a1a;
-}
+    .topbar-left a {
+      display: flex;
+      align-items: center;
+    }
 
-/* HEADER */
-.topbar {
-  background: white;
-  border-bottom: 1px solid #e6e9ee;
-  padding: 20px 34px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .logo {
+      width: 280px;
+      height: auto;
+    }
 
-.logo {
-  width: 260px;
-}
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
 
-/* LANG */
-.lang-switch button {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid #cfd6df;
-  background: white;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .lang-switch button {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #cfd6df;
+      background: white;
+      color: #7a8490;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.lang-switch button.active {
-  border-color: #003882;
-  color: #003882;
-}
+    .lang-switch button.active {
+      border-color: #003882;
+      color: #003882;
+      background: #f4f8fc;
+    }
 
-/* CONTENT */
-.page-wrap {
-  max-width: 980px;
-  margin: 36px auto;
-  padding: 0 20px;
-}
+    .page-wrap {
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 0 20px;
+    }
 
-.page-intro {
-  background: white;
-  border-radius: 12px;
-  padding: 28px 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  margin-bottom: 26px;
-}
+    .page-intro {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 26px;
+    }
 
-/* 🔥 SOLO QUI ROGUE */
-.page-intro h1 {
-  font-family: 'RogueSans', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin: 0 0 10px 0;
-}
+    .page-intro h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      color: #243648;
+      font-weight: 500;
+      font-family: 'RogueSans', Arial, sans-serif;
+    }
 
-/* TESTO torna normale */
-.page-intro p {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
-  color: #4a5563;
-}
+    .page-intro p {
+      margin: 0;
+      font-size: 18px;
+      color: #4a5563;
+      font-family: Arial, sans-serif;
+    }
 
-/* JOB CARD */
-.job {
-  background: white;
-  padding: 24px;
-  margin-bottom: 22px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-}
+    .job {
+      background: white;
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      border: 1px solid #e7ebf0;
+    }
 
-/* 🔥 TITOLI ANNUNCI */
-.title {
-  font-family: 'RogueSans', sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-}
+    .title {
+      font-size: 22px;
+      font-weight: 500;
+      font-family: 'RogueSans', Arial, sans-serif;
+      margin-bottom: 4px;
+    }
 
-/* resto PT Sans */
-.company,
-.location,
-.description,
-.contact-info {
-  font-family: 'PT Sans', sans-serif;
-}
+    .company {
+      color: #5b6572;
+      margin-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
 
-.extra {
-  background: #eaf1fb;
-  color: #003882;
-  padding: 6px 10px;
-  border-radius: 20px;
-  display: inline-block;
-  margin: 10px 0;
-}
+    .location {
+      margin-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
 
-/* 🔥 BOTTONE */
-.button {
-  background: #003882;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-family: 'RogueSans', sans-serif;
-  font-weight: 500;
-}
+    .extra {
+      display: inline-block;
+      background: #eaf1fb;
+      color: #003882;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-family: Arial, sans-serif;
+    }
 
-.button:hover {
-  background: #002d6f;
-}
+    .description {
+      margin: 10px 0;
+      font-family: Arial, sans-serif;
+    }
 
-.contact-info a {
-  color: #003882;
-  text-decoration: none;
-}
+    .button {
+      display: inline-block;
+      background: #003882;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-family: 'RogueSans', Arial, sans-serif;
+      margin-top: 8px;
+    }
 
-</style>
+    .button:hover {
+      background: #002d6f;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact-info a {
+      color: #003882;
+      text-decoration: none;
+    }
+
+    .contact-line {
+      display: block;
+      margin-top: 4px;
+      color: #003882;
+    }
+
+    .icon-blue {
+      color: #003882;
+      display: inline-block;
+      width: 18px;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <a href="https://www.blauschild.it/" target="_blank">
-    <img src="logo-blauschild.jpg" class="logo">
-  </a>
+  <div class="topbar">
+    <div class="topbar-left">
+      <a href="https://www.blauschild.it/" target="_blank" rel="noopener noreferrer">
+        <img src="logo-blauschild.jpg" class="logo" alt="Blauschild">
+      </a>
+    </div>
 
-  <div class="lang-switch">
-    <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
-    <button id="btn-it" onclick="setLang('it')">IT</button>
-  </div>
-</div>
-
-<div class="page-wrap">
-  <div class="page-intro">
-    <h1 id="pageTitle">Offene Stellen</h1>
-    <p id="pageText">
-      Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe.
-    </p>
+    <div class="lang-switch">
+      <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
+      <button id="btn-it" onclick="setLang('it')">IT</button>
+    </div>
   </div>
 
-  <div id="jobs"></div>
-</div>
+  <div class="page-wrap">
+    <div class="page-intro">
+      <h1 id="pageTitle">Offene Stellen</h1>
+      <p id="pageText">
+        Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe.
+        Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb.
+      </p>
+    </div>
 
-<script>
+    <div id="jobs"></div>
+  </div>
 
-let currentLang = "de";
+  <script>
+    let currentLang = "de";
 
-function setLang(lang) {
-  currentLang = lang;
+    function setLang(lang) {
+      currentLang = lang;
 
-  document.getElementById("btn-de").classList.toggle("active", lang === "de");
-  document.getElementById("btn-it").classList.toggle("active", lang === "it");
+      document.getElementById("btn-de").classList.toggle("active", lang === "de");
+      document.getElementById("btn-it").classList.toggle("active", lang === "it");
 
-  document.getElementById("pageTitle").innerText =
-    lang === "de" ? "Offene Stellen" : "Offerte di lavoro";
+      document.getElementById("pageTitle").innerText =
+        lang === "de" ? "Offene Stellen" : "Offerte di lavoro";
 
-  document.getElementById("pageText").innerText =
-    lang === "de"
-      ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe."
-      : "Qui trovi le offerte di lavoro attuali delle officine BLAUSCHILD.";
+      document.getElementById("pageText").innerText =
+        lang === "de"
+          ? "Hier findest du aktuelle Stellenangebote unserer BLAUSCHILD-Betriebe. Entdecke offene Positionen und bewirb dich direkt beim jeweiligen Betrieb."
+          : "Qui trovi le offerte di lavoro attuali delle officine BLAUSCHILD. Scopri le posizioni aperte e candidati direttamente presso l’azienda interessata.";
 
-  loadJobs();
-}
+      loadJobs();
+    }
 
-function loadJobs() {
-  fetch("jobs.csv")
-    .then(res => res.text())
-    .then(csv => {
-      const parsed = Papa.parse(csv, {
-        header: true,
-        delimiter: ";",
-        skipEmptyLines: true
-      });
+    function loadJobs() {
+      fetch("jobs.csv")
+        .then(res => res.text())
+        .then(csv => {
+          const parsed = Papa.parse(csv, {
+            header: true,
+            delimiter: ";",
+            skipEmptyLines: true
+          });
 
-      const container = document.getElementById("jobs");
-      container.innerHTML = "";
+          const container = document.getElementById("jobs");
+          container.innerHTML = "";
 
-      parsed.data.forEach(job => {
-        if (!job["Aktiv"] || job["Aktiv"].toLowerCase() !== "ja") return;
+          let visible = 0;
 
-        const div = document.createElement("div");
-        div.className = "job";
+          parsed.data.forEach(job => {
+            if (!job["Aktiv"] || job["Aktiv"].toLowerCase() !== "ja") return;
 
-        div.innerHTML = `
-          <div class="title">${job["Jobtitel / Stellenbezeichnung_DE"]}</div>
-          <div class="company">${job["Firmenname"]}</div>
-          <div class="location">${job["Ort"].replace(/\n/g,"<br>")}</div>
-          <div class="extra">${job["extra_DE"]}</div>
-          <div class="description">${job["Stellenbeschreibung_DE"]}</div>
+            const title = currentLang === "de"
+              ? job["Jobtitel / Stellenbezeichnung_DE"]
+              : job["Jobtitel / Stellenbezeichnung_IT"];
 
-          <a class="button" href="mailto:${job["contact_email"]}">
-            Jetzt bewerben
-          </a>
+            const location = currentLang === "de"
+              ? job["Ort"]
+              : job["Ort_IT"];
 
-          <div class="contact-info">
-            ✉ <a href="mailto:${job["contact_email"]}">${job["contact_email"]}</a><br>
-            ☎ <a href="tel:${job["contact_tel"]}">${job["contact_tel"]}</a>
-          </div>
-        `;
+            const description = currentLang === "de"
+              ? job["Stellenbeschreibung_DE"]
+              : job["Stellenbeschreibung_IT"];
 
-        container.appendChild(div);
-      });
-    });
-}
+            const extra = currentLang === "de"
+              ? job["extra_DE"]
+              : job["extra_IT"];
 
-loadJobs();
+            const email = job["contact_email"];
+            const phone = job["contact_tel"];
+            const company = job["Firmenname"];
 
-</script>
+            const div = document.createElement("div");
+            div.className = "job";
+
+            div.innerHTML = `
+              <div class="title">${title}</div>
+              <div class="company">${company}</div>
+              <div class="location">${(location || "").replace(/\n/g,"<br>")}</div>
+              ${extra ? `<div class="extra">${extra}</div>` : ""}
+              <div class="description">${(description || "").replace(/\n/g,"<br>")}</div>
+
+              ${email ? `<a class="button" href="mailto:${email}">Jetzt bewerben</a>` : ""}
+
+              <div class="contact-info">
+                ${email ? `<span class="contact-line"><span class="icon-blue">✉</span> <a href="mailto:${email}">${email}</a></span>` : ""}
+                ${phone ? `<span class="contact-line"><span class="icon-blue">☎</span> <a href="tel:${phone}">${phone}</a></span>` : ""}
+              </div>
+            `;
+
+            container.appendChild(div);
+            visible++;
+          });
+
+          if (!visible) {
+            container.innerHTML = `<div class="empty">Keine Stellen verfügbar</div>`;
+          }
+        });
+    }
+
+    loadJobs();
+  </script>
 
 </body>
 </html>
