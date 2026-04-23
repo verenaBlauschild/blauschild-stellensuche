@@ -80,18 +80,18 @@
       margin-bottom: 26px;
     }
 
-    /* 🔥 TITOLI */
-   .page-intro h1 {
-  font-size: 2.5rem;
-  font-family: 'RogueSans', sans-serif;
-  font-weight: 500;
-  margin: 0 0 10px 0;
-  color: #003882; /* 🔥 blu Blauschild */
-}
+    .page-intro h1 {
+      font-size: 2.5rem;
+      font-family: 'RogueSans', sans-serif;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+      color: #003882;
+    }
+
     .page-intro p {
       font-size: 16px;
       line-height: 1.5;
-      max-width: 850px; /* 👈 evita troppo a capo */
+      max-width: 850px;
       margin: 0;
       color: #4a5563;
     }
@@ -103,6 +103,14 @@
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.05);
       border: 1px solid #e7ebf0;
+    }
+
+    .job-logo {
+      max-width: 150px;
+      max-height: 55px;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 14px;
     }
 
     .title {
@@ -135,7 +143,6 @@
       margin: 10px 0;
     }
 
-    /* 🔥 BUTTON */
     .button {
       display: inline-block;
       background: #003882;
@@ -265,6 +272,7 @@
             const email = job["contact_email"];
             const phone = job["contact_tel"];
             const company = job["Firmenname"];
+            const logo = job["logo"];
 
             const buttonText = currentLang === "de"
               ? "Jetzt bewerben"
@@ -274,6 +282,7 @@
             div.className = "job";
 
             div.innerHTML = `
+              ${logo ? `<img src="logos/${logo}" class="job-logo" alt="${company}">` : ""}
               <div class="title">${title}</div>
               <div class="company">${company}</div>
               <div class="location">${(location || "").replace(/\n/g,"<br>")}</div>
