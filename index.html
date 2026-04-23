@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blauschild Stellensuche</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSV -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
   <style>
+    /* 🔥 FONT PERSONALIZZATO */
+    @font-face {
+      font-family: 'RogueSans';
+      src: url('RogueSans-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
     body {
-      font-family: 'PT Sans', sans-serif;
+      font-family: Arial, sans-serif;
       background: #f4f6f8;
       margin: 0;
       color: #1a1a1a;
@@ -30,17 +34,11 @@
       flex-wrap: wrap;
     }
 
-    .topbar-left a {
-      display: flex;
-      align-items: center;
-    }
-
     .logo {
       width: 260px;
       height: auto;
     }
 
-    /* LANGUAGE */
     .lang-switch {
       display: flex;
       gap: 10px;
@@ -78,14 +76,14 @@
       margin-bottom: 26px;
     }
 
-    /* 🔥 TITOLO CORRETTO */
+    /* 🔥 TITOLO IDENTICO AL SITO */
     .page-intro h1 {
       margin: 0 0 10px 0;
       font-size: 2.5rem;
       line-height: 1.2;
       color: #243648;
       font-weight: 500;
-      font-family: 'rogue-sans', 'PT Sans', sans-serif;
+      font-family: 'RogueSans', sans-serif;
     }
 
     .page-intro p {
@@ -106,8 +104,8 @@
 
     .title {
       font-size: 22px;
-      font-weight: 600;
-      font-family: 'rogue-sans', 'PT Sans', sans-serif;
+      font-weight: 500;
+      font-family: 'RogueSans', sans-serif;
       margin-bottom: 4px;
     }
 
@@ -141,8 +139,13 @@
       padding: 10px 14px;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-family: 'RogueSans', sans-serif;
       margin-top: 8px;
+    }
+
+    .button:hover {
+      background: #002d6f;
     }
 
     .contact-info {
@@ -169,11 +172,9 @@
 
   <!-- HEADER -->
   <div class="topbar">
-    <div class="topbar-left">
-      <a href="https://www.blauschild.it/" target="_blank">
-        <img src="logo-blauschild.jpg" class="logo">
-      </a>
-    </div>
+    <a href="https://www.blauschild.it/" target="_blank">
+      <img src="logo-blauschild.jpg" class="logo">
+    </a>
 
     <div class="lang-switch">
       <button id="btn-de" class="active" onclick="setLang('de')">DE</button>
