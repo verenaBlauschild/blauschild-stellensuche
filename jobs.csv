@@ -1,6 +1,4 @@
-﻿;;topergo.app – Stellenvorlage für Mirko Quinz;;;;;;;;;;;;;;
-;;Bitte alle Felder mit * ausfüllen. Für jede Werkstatt eine eigene Zeile verwenden.;;;;;;;;;;;;;;
-ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;contact_email;contact_tel;apply_link
+﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;contact_email;contact_tel;apply_link
 1;YES;Karosserie Kaserer;Karosserietechniker;Tecnico di carrozzeria;"Binderweg 8
 I-39011 Lana (BZ)";"Binderweg 8
 I-39011 Lana (BZ)";info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operatore qualificato;kaserer.jpg;;;
