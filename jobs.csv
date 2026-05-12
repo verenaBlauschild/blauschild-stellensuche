@@ -1,5 +1,5 @@
 ﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;contact_email;contact_tel;apply_link
-1;YES;Karosserie Kaserer;Karosserietechniker;Tecnico di carrozzeria;Binderweg 8 | 39011 Lana (BZ);Via Binder 8 | 39011 Lana (BZ);info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operatore qualificato;kaserer.jpg;;;
+1;YES;Karosserie Kaserer;Karosserietechniker;Tecnico di carrozzeria;Binderweg 8 | 39011 Lana (BZ);Via Binder 8 | 39011 Lana (BZ);info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operaio qualificato;kaserer.jpg;;;
 2;YES;Sportgarage GmbH;qualifizierter Mechaniker;Meccanico qualificato;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;abgeschlossene Lehre mit Gesellenbrief;Apprendistato completato con attestato di qualifica professionale;Kfz-Techniker;Tecnico automobilistico;sportgarage.jpg;;;
 3;YES;Sportgarage GmbH;Lehrling Mechaniker;Apprendista meccanico;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;Lehrling;Apprendista;Lehre als Kfz-Techniker;Apprendistato come tecnico auto;sportgarage.jpg;;;
 4;YES;Sportgarage GmbH;Reifenmonteur + Fahrzeugaufbereiter;Gommista + Addetto alla preparazione dei veicoli;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;"handwerkliches Geschick
@@ -145,20 +145,24 @@ Da noi dovrete essere in grado di riparare tutti i tipi di veicoli, dalle auto d
 19;YES;K&M Karosserieservice OHG;Karosserietechniker;Tecnico di carrozzeria;Handwerkerzone 32 | 39054 Ritten (BZ);Zona Artigianale 32 | 39054 Renon (BZ);km@karosserie.bz;;"Aufgaben:
 •	Demontage und Montage von Fahrzeugteilen
 •	Unterstützung bei Reparatur- und Instandhaltungsarbeiten an Karosserien
-•	Allgemeine Werkstatttätigkeiten";"Mansioni:
-•Smontaggio e montaggio di componenti automobilistici
-•Assistenza nei lavori di riparazione e manutenzione delle carrozzerie
-•Attività generali di officina";"Anforderungen:
+•	Allgemeine Werkstatttätigkeiten
+
+Anforderungen:
 •	Erfahrung im Bereich Karosseriearbeit
 •	Handwerkliches Geschick
 •	Motivation und Interesse an der Arbeit mit Fahrzeugen
-•	Zuverlässige und selbstständige Arbeitsweise";"Requisiti:
+•	Zuverlässige und selbstständige Arbeitsweise";"Mansioni:
+•Smontaggio e montaggio di componenti automobilistici
+•Assistenza nei lavori di riparazione e manutenzione delle carrozzerie
+•Attività generali di officina
+
+Requisiti:
 •    Esperienza nel settore della carrozzeria
 •    Abilità manuali
 •    Motivazione e interesse per il lavoro con i veicoli
-•    Affidabilità e autonomia nel lavoro";k&m.jpg;;;
-20;YES;Auto Graf GmbH;Karosseriespengler;Carrozziere;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehre oder abgeschlossene Ausbildung;Apprendista o diploma di formazione professionale;;;autograf.jpg;;;
-21;YES;Auto Graf GmbH;KFZ-Techniker;Meccanico;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehre oder abgeschlossene Ausbildung;Apprendista o diploma di formazione professionale;;;autograf.jpg;;;
+•    Affidabilità e autonomia nel lavoro";Geselle;Operaio qualificato;k&m.jpg;;;
+20;YES;Auto Graf GmbH;Karosseriespengler;Carrozziere;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;;;
+21;YES;Auto Graf GmbH;KFZ-Techniker;Meccanico;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;;;
 ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;
