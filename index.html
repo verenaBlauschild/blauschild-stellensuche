@@ -355,21 +355,21 @@ const applyLink = (job["apply_link"] || "").trim();
 
 ${gehalt ? `
   <div style="margin-top:10px;">
-    <strong>${currentLang === "de" ? "Bruttogehalt" : "Retribuzione lorda"}</strong><br>
+    <strong style="color:#003882;">${currentLang === "de" ? "Bruttogehalt" : "Retribuzione lorda"}</strong><br>
     ${gehalt.replace(/\n/g,"<br>")}
   </div>
 ` : ""}
 
 ${kollektiv ? `
   <div style="margin-top:10px;">
-    <strong>${currentLang === "de" ? "Kollektivvertrag" : "Contratto collettivo"}</strong><br>
+   <strong style="color:#003882;">${currentLang === "de" ? "Kollektivvertrag" : "Contratto collettivo"}</strong><br>
     ${kollektiv.replace(/\n/g,"<br>")}
   </div>
 ` : ""}
 
 ${einstufung ? `
   <div style="margin-top:10px;">
-    <strong>${currentLang === "de" ? "Einstufung" : "Inquadramento"}</strong><br>
+    <strong style="color:#003882;">${currentLang === "de" ? "Einstufung" : "Inquadramento"}</strong><br>
     ${einstufung.replace(/\n/g,"<br>")}
   </div>
 ` : ""}
