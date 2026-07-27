@@ -239,7 +239,15 @@
       </p>
     </div>
 
-    <div id="jobs"></div>
+    <div class="job-toolbar">
+  <div id="jobCount" class="job-count"></div>
+
+  <select id="cityFilter" class="city-filter" onchange="loadJobs()">
+    <option value="">Alle Orte</option>
+  </select>
+</div>
+
+<div id="jobs"></div>
   </div>
 
   <script>
