@@ -500,7 +500,10 @@ ${extra ? `<div class="extra" style="margin-top:10px;">${extra}</div>` : ""}
             container.appendChild(div);
             visible++;
           });
-
+document.getElementById("jobCount").innerText =
+  currentLang === "de"
+    ? `${visible} ${visible === 1 ? "offene Stelle" : "offene Stellen"}`
+    : `${visible} ${visible === 1 ? "offerta di lavoro" : "offerte di lavoro"}`;
           if (!visible) {
             container.innerHTML = `
               <div class="empty">
