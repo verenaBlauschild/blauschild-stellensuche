@@ -313,7 +313,15 @@
     function normalizePhoneForLink(phone) {
       return (phone || "").replace(/[^\d+]/g, "");
     }
+function extractCity(location) {
+  const text = (location || "")
+    .replace(/\n/g, " ")
+    .trim();
 
+  const match = text.match(/\b\d{5}\s+(.+?)(?:\s*\(BZ\))?$/);
+
+  return match ? match[1].trim() : text;
+}
     function loadJobs() {
       fetch("jobs.csv")
         .then(res => res.text())
