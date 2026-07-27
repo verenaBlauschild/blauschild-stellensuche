@@ -387,7 +387,12 @@ cityFilter.innerHTML = `
 if (cities.has(selectedCity)) {
   cityFilter.value = selectedCity;
 }
-          parsed.data.forEach(job => {
+          activeJobs.forEach(job => {
+            const cityKey = extractCity(job["Ort"] || "");
+
+if (selectedCity && cityKey !== selectedCity) {
+  return;
+}
             const aktiv = (job["Aktiv"] || "").toString().trim().toLowerCase();
             if (aktiv !== "yes" && aktiv !== "ja") return;
 
