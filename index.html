@@ -502,8 +502,8 @@ ${extra ? `<div class="extra" style="margin-top:10px;">${extra}</div>` : ""}
           });
 document.getElementById("jobCount").innerText =
   currentLang === "de"
-    ? `${visible} ${visible === 1 ? "offene Stelle" : "offene Stellen"}`
-    : `${visible} ${visible === 1 ? "offerta di lavoro" : "offerte di lavoro"}`;
+    ? `${visible} ${visible === 1 ? "offener Job" : "offene Jobs"}`
+    : `${visible} ${visible === 1 ? "posizione aperta" : "posizioni aperte"}`;
           if (!visible) {
             container.innerHTML = `
               <div class="empty">
