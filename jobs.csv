@@ -1,11 +1,11 @@
-﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;contact_email;contact_tel;apply_link
-1;YES;Karosserie Kaserer;Karosserietechniker;Tecnico di carrozzeria;Binderweg 8 | 39011 Lana (BZ);Via Binder 8 | 39011 Lana (BZ);info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operaio qualificato;kaserer.jpg;;;
-2;YES;Sportgarage GmbH;qualifizierter Mechaniker;Meccanico qualificato;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;abgeschlossene Lehre mit Gesellenbrief;Apprendistato completato con attestato di qualifica professionale;Kfz-Techniker;Tecnico automobilistico;sportgarage.jpg;;;
-3;YES;Sportgarage GmbH;Lehrling Mechaniker;Apprendista meccanico;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;Lehrling;Apprendista;Lehre als Kfz-Techniker;Apprendistato come tecnico auto;sportgarage.jpg;;;
-4;YES;Sportgarage GmbH;Reifenmonteur + Fahrzeugaufbereiter;Gommista + Addetto alla preparazione dei veicoli;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;"handwerkliches Geschick
+﻿ID;Aktiv;Firmenname;Jobtitel / Stellenbezeichnung_DE;Jobtitel / Stellenbezeichnung_IT;Ort;Ort_IT;Kontakt_Email;Kontakt_Tel;Stellenbeschreibung_DE;Stellenbeschreibung_IT;extra_DE;extra_IT;logo;Gehalt_DE;Gehalt_IT;Kollektivvertrag_DE;Kollektivvertrag_IT;Einstufung_DE;Einstufung_IT;apply_link
+1;YES;Karosserie Kaserer;Karosserietechniker (m/w/d);Tecnico di carrozzeria / Lamierista m/f/d;Binderweg 8 | 39011 Lana (BZ);Via Binder 8 | 39011 Lana (BZ);info@karosserie.it ;0473 562220;Motiviert, selbständiges Arbeiten;Motivazione, capacità di lavorare in autonomia;Lehre / Fachkraft;Apprendistato / Operaio qualificato;kaserer.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+2;YES;Sportgarage GmbH;qualifizierter Mechaniker (m/w/d);Meccanico qualificato m/f/d;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;abgeschlossene Lehre mit Gesellenbrief;Apprendistato completato con attestato di qualifica professionale;Kfz-Techniker;Tecnico automobilistico;sportgarage.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+3;YES;Sportgarage GmbH;Lehrling Mechaniker (m/w/d);Apprendista meccanico m/f/d;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;Lehrling;Apprendista;Lehre als Kfz-Techniker;Apprendistato come tecnico auto;sportgarage.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+4;YES;Sportgarage GmbH;Reifenmonteur + Fahrzeugaufbereiter (m/w/d);Gommista + Addetto alla preparazione dei veicoli m/f/d;Max-Valier-Straße 7 | 39012 Meran (BZ);Via Max Valier 7 | 39012 Merano (BZ);service@sportgarage.it;0473 273300;"handwerkliches Geschick
 Hauptaufgaben: Reifen montieren, Neufahrzeuge und Gebrauchtwagen aufbereiten, Innen- und Außenreinigung von Fahrzeugen, allfällige Kleinaufgaben wie z.B. Austausch Lampe/Scheibenwischer";"Abilità manuali
-Mansioni principali: montaggio di pneumatici, preparazione di veicoli nuovi e usati, pulizia interna ed esterna dei veicoli, eventuali piccoli lavori come ad esempio la sostituzione di lampadine/tergicristalli";Reifenmonteur;Gommista ;sportgarage.jpg;;;
-5;YES;Alpengarage;Mechaniker oder Lehrling im 3-4 Jahr;Meccanico o apprendista al 3°-4° anno;St.-Lorenzner-Straße 35/b | 39031 Bruneck (BZ);Via San Lorenzo 35/b | 39031 Brunico (BZ);vendita@alpengarage.com;0474 555516 (Herr Klaus Mutschlechner);Bereits Kenntnisse im Fachbereich;Conoscenze pregresse nel settore;KFZ Mechatroniker oder Lehrling;Tecnico meccatronico auto o apprendista;alpengaragebruneck.jpg;;;
+Mansioni principali: montaggio di pneumatici, preparazione di veicoli nuovi e usati, pulizia interna ed esterna dei veicoli, eventuali piccoli lavori come ad esempio la sostituzione di lampadine/tergicristalli";Reifenmonteur;Gommista ;sportgarage.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+5;NO;Alpengarage;Mechaniker oder Lehrling im 3-4 Jahr (m/w/d);Meccanico o apprendista al 3°-4° anno m/f/d;St.-Lorenzner-Straße 35/b | 39031 Bruneck (BZ);Via San Lorenzo 35/b | 39031 Brunico (BZ);vendita@alpengarage.com;0474 555516 (Herr Klaus Mutschlechner);Bereits Kenntnisse im Fachbereich;Conoscenze pregresse nel settore;KFZ Mechatroniker oder Lehrling;Tecnico meccatronico auto o apprendista;alpengaragebruneck.jpg;Bruttogehalt laut geltendem Kollektivvertrag, Einstufung je nach Qualifikation und Erfahrung, ab € … brutto/Monat. Details werden im persönlichen Gespräch besprochen.;Retribuzione lorda secondo il contratto collettivo vigente, inquadramento in base a qualifica ed esperienza, a partire da € … lordi/mese. I dettagli saranno discussi durante il colloquio.;;;;;
 6;YES;Auto Hofer;Serviceberater (m/w);Consulente di assistenza (m/f);Spitalwiese 21 | 39043 Klausen (BZ);Prato dell Ospizio 21 | 39043 Chiusa (BZ); job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Koordination der Werkstatttermine mit unseren Kunden
 •	Annahme der Kundenfahrzeuge und Auftragseröffnung 
@@ -34,9 +34,7 @@ Requisiti:
 •    Buona conoscenza del tedesco e dell'italiano 
 •    Ottima padronanza del computer 
 •    Metodo di lavoro organizzato, concentrato e orientato agli obiettivi 
-•    Competenza tecnica nel settore automobilistico (formazione come meccanico auto costituisce titolo preferenziale)
-
-";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;;;
+•    Competenza tecnica nel settore automobilistico (formazione come meccanico auto costituisce titolo preferenziale)";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
 7;NO;Auto Hofer;Mitarbeiter Arbeitsvorbereitung (m/w);Addetto alla pianificazione del lavoro (m/f);Spitalwiese 21 | 39043 Klausen (BZ);Prato dell Ospizio 21 | 39043 Chiusa (BZ); job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Zusammenstellen aller relevanten Unterlagen für den Serviceberater (Arbeitsaufträge, Checklisten, Prüfpläne u. dgl.)
 •	Prüfung der Verfügbarkeit von Ersatzteilen und Zubehör
@@ -59,7 +57,7 @@ Anforderungen:
 Requisiti: 
 •    Buona conoscenza del tedesco e dell'italiano
 •    Ottima padronanza del computer
-•    Metodo di lavoro organizzato, concentrato e affidabile";Fachkraft / auch Ausbildung im Betrieb möglich;Personale qualificato / possibilità di formazione in azienda;autohofer.jpg;;;
+•    Metodo di lavoro organizzato, concentrato e affidabile";Fachkraft / auch Ausbildung im Betrieb möglich;Personale qualificato / possibilità di formazione in azienda;autohofer.jpg;;;;;;;
 8;YES;Auto Hofer;Kfz-Mechaniker (m/w);Meccanico (m/f);Spitalwiese 21 | 39043 Klausen (BZ);Prato dell Ospizio 21 | 39043 Chiusa (BZ); job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Die Instandhaltung und Reparatur von Fahrzeugen
 
@@ -72,7 +70,7 @@ Anforderungen:
 Requisiti: 
 •    Resistenza allo stress, flessibilità e approccio orientato alle soluzioni
 •    Interesse a conoscere il mondo dei marchi VW, SEAT, Škoda e VW Veicoli Commerciali
-•    Capacità di lavorare in squadra";Fachkraft / Gesellenbrief;Operatore qualificato / Diploma di qualifica professionale;autohofer.jpg;;;
+•    Capacità di lavorare in squadra";Fachkraft / Gesellenbrief;Operatore qualificato / Diploma di qualifica professionale;autohofer.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
 9;YES;Auto Hofer;Bürolehrling / Empfang (m/w);Apprendista d'ufficio / Addetto/a alla reception (m/f);Spitalwiese 21 | 39043 Klausen (BZ);Prato dell Ospizio 21 | 39043 Chiusa (BZ); job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Betreuung unserer Verkaufskunden und Sicherstellung eines rundum positiven Kundenerlebnisses
 •	Telefonzentrale für den Service und Verkauf
@@ -97,8 +95,7 @@ Requisiti:
 •    Avere un approccio aperto e cordiale con gli altri
 •    Buona conoscenza del tedesco e dell'italiano
 •    Buona padronanza del computer
-•    Metodo di lavoro organizzato, concentrato e affidabile
-";Lehre / Ausbildung im Betrieb;Formazione / Apprendistato in azienda;autohofer.jpg;;;
+•    Metodo di lavoro organizzato, concentrato e affidabile";Lehre / Ausbildung im Betrieb;Formazione / Apprendistato in azienda;autohofer.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
 10;YES;Auto Hofer;Teamassistenz / Empfang (m/w);Assistente di squadra / Addetto/a alla reception (m/f);Spitalwiese 21 | 39043 Klausen (BZ);Prato dell Ospizio 21 | 39043 Chiusa (BZ); job@autohofer.com;0472847952 Magdalena Kerer;"Aufgabenbereich: 
 •	Betreuung unserer Verkaufskunden und Sicherstellung eines rundum positiven Kundenerlebnisses
 •	Telefonzentrale für den Service und Verkauf
@@ -123,26 +120,24 @@ Requisiti:
 •    Avere un approccio aperto e cordiale con gli altri
 •    Buona conoscenza del tedesco e dell'italiano
 •    Buona padronanza del computer
-•    Metodo di lavoro organizzato, concentrato e affidabile
- 
-";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;;;
-11;YES;Karosserie Huber Bruneck;Karosserietechniker / Spengler;Tecnico di carrozzeria / Lamierista;J.-G.-Mahl-Straße 4 | 39031 Bruneck (BZ);Via J.-G.-Mahl 4 | 39031 Brunico (BZ);manfred@huber.srl;;wenn möglich abgeschlossene Lehre;se possibile, aver completato un apprendistato;Fachkraft;Operatore specializzato;huber.jpg;;;
-12;YES;Garage Europa;Mechaniker;Meccanico;Eisackstraße 1 | 39049 Pfitsch (BZ);Via dell’Isarco 1 | 39049 Val di Vizze (BZ);info@garageeuropa.it; 0472 765587;KFZ-Mechatroniker;Tecnico della meccanica automobilistica;Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;garageeuropa.jpg;;;
-13;YES;Auto Sarntal OHG;Karosseriespengler;Carrozziere;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 335 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;;;
-14;YES;Auto Sarntal OHG;Lackierer;Verniciatore;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 336 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;;;
-15;YES;Auto Sarntal OHG;Mechaniker;Meccanico;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 337 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;;;
-16;YES;Karosserie Leitner;Lehrlinge;Apprendista;Fabrikstraße 1 | 39031 Bruneck (BZ);Via Fabbrica 1 | 39031 Brunico (BZ);info@leitner-r.eu; 0474 552286;Karosserie + Lackierer;Carrozzeria + Verniciatura;Grundlehrgang;Corso base;leitner.jpg;;;
-17;YES;Auto Freitag;Mitarbeiter/in für die Annahme;Addetto/a al ricevimento;Passeirer Straße 80 | 39015 St. Leonhard in Passeier (BZ);Via Passiria 80 | 39015 San Leonardo in Passiria (BZ);ulli@autofreitag.it;393 1977204 (Ulli);"Kenntnisse im Autosektor
-Mecchaniker bevorzugt
+•    Metodo di lavoro organizzato, concentrato e affidabile";Fachkraft / Erfahrung in ähnlichem Bereich;Personale qualificato / Esperienza in un settore affine;autohofer.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+11;YES;Karosserie Huber Bruneck;Karosserietechniker / Spengler (m/w/d);Tecnico di carrozzeria / Lamierista m/f/d;J.-G.-Mahl-Straße 4 | 39031 Bruneck (BZ);Via J.-G.-Mahl 4 | 39031 Brunico (BZ);manfred@huber.srl;;wenn möglich abgeschlossene Lehre;se possibile, aver completato un apprendistato;Fachkraft;Operatore specializzato;huber.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+12;NO;Garage Europa;Mechaniker (m/w/d);Meccanico m/f/d;Eisackstraße 1 | 39049 Pfitsch (BZ);Via dell’Isarco 1 | 39049 Val di Vizze (BZ);info@garageeuropa.it; 0472 765587;Kfz-Mechatroniker;Tecnico della meccanica automobilistica;Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;garageeuropa.jpg;Bruttogehalt laut geltendem Kollektivvertrag, Einstufung je nach Qualifikation und Erfahrung, ab € … brutto/Monat. Details werden im persönlichen Gespräch besprochen.;Retribuzione lorda secondo il contratto collettivo vigente, inquadramento in base a qualifica ed esperienza, a partire da € … lordi/mese. I dettagli saranno discussi durante il colloquio.;;;;;
+13;YES;Auto Sarntal OHG;Karosseriespengler (m/w/d);Carrozziere m/f/d;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 335 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+14;YES;Auto Sarntal OHG;Lackierer (m/w/d);Verniciatore m/f/d;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 336 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+15;YES;Auto Sarntal OHG;Mechaniker (m/w/d);Meccanico m/f/d;Handwerkerzone 15 | 39058 Sarntal (BZ);Zona Artigianale 15 | 39058 Sarentino (BZ);sarah@autosarntal.com; 337 7413386;Arbeitszeiten 07:30–12:00 / 13:00–16:30;Orario di lavoro: 07:30–12:00 / 13:00–16:30;Geselle;Operaio qualificato;autosarntal.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+16;YES;Karosserie Leitner;Lehrlinge (m/w/d);Apprendista m/f/d;Fabrikstraße 1 | 39031 Bruneck (BZ);Via Fabbrica 1 | 39031 Brunico (BZ);info@leitner-r.eu; 0474 552286;Karosserie + Lackierer;Carrozzeria + verniciatura;Grundlehrgang;Corso base;leitner.jpg;Lehrlingsentschädigung ab € 800,00 brutto/Monat, je nach Lehrjahr, Qualifikation und anwendbarem Kollektivvertrag. Details werden im persönlichen Gespräch besprochen.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+17;YES;Auto Freitag;Mitarbeiter/in für die Annahme (m/w/d);Addetto/a al ricevimento m/f/d;Passeirer Straße 80 | 39015 St. Leonhard in Passeier (BZ);Via Passiria 80 | 39015 San Leonardo in Passiria (BZ);ulli@autofreitag.it;393 1977204 (Ulli);"Kenntnisse im Autosektor
+Erfahrung als Mechaniker oder im Kfz-Bereich von Vorteil
 Gesucht wird eine Person mit Kenntnissen im Autosektor für die Annahme sowie Ersatzteilbestellung";"Conoscenze nel settore automobilistico
-Preferibilmente meccanico
-Si cerca una persona con conoscenze nel settore automobilistico per l'accettazione della merce e l'ordinazione dei ricambi";Annahme;Accettazione;autofreitag.jpg;;;
-18;YES;Alpin Racing Garage MC GmbH;2 Mechaniker;2 Meccanici;Moritzingerweg 88 | 39100 Bozen (BZ);Via San Maurizio 88 | 39100 Bolzano (BZ); info@alpinracing.it;;"Wir suchen aktuell nach Mechanikern mit beendeter Lehre.
-Sie sollten selbstständig arbeiten können und natürlich motiviert sein, besser zu werden.
-Da sie bei uns vom Oldtimer bis zum Rennwagen alle Fahrzeuge und Arbeiten reparieren können sollten.";"Al momento stiamo cercando meccanici che abbiano completato l'apprendistato.
-Dovete essere in grado di lavorare in autonomia ed essere, ovviamente, motivati a migliorare.
-Da noi dovrete essere in grado di riparare tutti i tipi di veicoli, dalle auto d'epoca alle auto da corsa, e svolgere ogni tipo di intervento.";Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;alpinracing.jpg;;;
-19;YES;K&M Karosserieservice OHG;Karosserietechniker;Tecnico di carrozzeria;Handwerkerzone 32 | 39054 Ritten (BZ);Zona Artigianale 32 | 39054 Renon (BZ);km@karosserie.bz;;"Aufgaben:
+Esperienza come meccanico o nel settore auto costituisce titolo preferenziale
+Si cerca una persona con conoscenze nel settore automobilistico per l’accettazione e l’ordinazione dei ricambi";Annahme;Accettazione;autofreitag.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+18;YES;Alpin Racing Garage MC GmbH;2 Mechaniker (m/w/d);2 Meccanici m/f/d;Moritzingerweg 88 | 39100 Bozen (BZ);Via San Maurizio 88 | 39100 Bolzano (BZ); info@alpinracing.it;;"Wir suchen aktuell zwei Personen mit abgeschlossener Lehre im Kfz-Bereich.
+Sie sollten selbstständig arbeiten können und motiviert sein, sich weiterzuentwickeln.
+Bei uns werden Fahrzeuge vom Oldtimer bis zum Rennwagen repariert – deshalb ist vielseitiges technisches Interesse wichtig.";"Al momento cerchiamo due figure con apprendistato completato nel settore meccanico.
+Le persone selezionate devono essere in grado di lavorare in autonomia ed essere motivate a migliorarsi.
+Da noi si lavora su veicoli molto diversi, dalle auto d’epoca alle auto da corsa: per questo è importante avere interesse tecnico e versatilità.";Fachkraft (Gesellenbrief) bzw. abgeschlossene Lehre;Operatore qualificato (diploma di qualifica professionale) o apprendistato completato;alpinracing.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+19;YES;K&M Karosserieservice OHG;Karosserietechniker (m/w/d);Tecnico di carrozzeria  m/f/d;Handwerkerzone 32 | 39054 Ritten (BZ);Zona Artigianale 32 | 39054 Renon (BZ);km@karosserie.bz;;"Aufgaben:
 •	Demontage und Montage von Fahrzeugteilen
 •	Unterstützung bei Reparatur- und Instandhaltungsarbeiten an Karosserien
 •	Allgemeine Werkstatttätigkeiten
@@ -160,10 +155,10 @@ Requisiti:
 •    Esperienza nel settore della carrozzeria
 •    Abilità manuali
 •    Motivazione e interesse per il lavoro con i veicoli
-•    Affidabilità e autonomia nel lavoro";Geselle;Operaio qualificato;k&m.jpg;;;
-20;YES;Auto Graf GmbH;Karosseriespengler;Carrozziere;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;;;
-21;YES;Auto Graf GmbH;KFZ-Techniker;Meccanico;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;;;
-22;YES;Autocenter Polin;Mechaniker;Meccanico;Hauptstraße 20 | 39024 Mals (BZ);Via Nazionale 20 | 39024 Malles (BZ);steffi.blaas@autocenterpolin.com;;"Wir suchen einen gelernten Mechaniker (m/w/d) mit:
+•    Affidabilità e autonomia nel lavoro";Geselle;Operaio qualificato;k&m.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+20;YES;Auto Graf GmbH;Karosseriespengler (m/w/d);Carrozziere m/f/d;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+21;YES;Auto Graf GmbH;KFZ-Techniker (m/w/d);Meccanico m/f/d;Pizachstraße 27 | 39038 Innichen (BZ);Via Pizach 27 | 39038 San Candido (BZ);info@auto-graf.it;349 2954869;Lehrling oder Fachkraft mit abgeschlossener Ausbildung;Apprendista o diploma di formazione professionale, con inizio immediato;Lehre / Fachkraft;Apprendistato / Operaio qualificato;autograf.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+22;YES;Autocenter Polin;Mechaniker (m/w/d);Meccanico m/f/d;Hauptstraße 20 | 39024 Mals (BZ);Via Nazionale 20 | 39024 Malles (BZ);steffi.blaas@autocenterpolin.com;;"Wir suchen eine ausgebildete Fachkraft im Kfz-Bereich mit:
 ❤️ Leidenschaft
 🛡️ Verantwortungsbewusstsein
 💪 Führungsstärke
@@ -175,7 +170,7 @@ Requisiti:
 •	💰 Leistungsgerechte Bezahlung 
 	
 🚀 Klingt gut?
-Dann werde Teil unseres Teams!";"Cerchiamo un meccanico qualificato (m/f/d) con:
+Dann werde Teil unseres Teams!";"Cerchiamo una figura qualificata nel settore meccanico con:
 ❤️ Passione
 🛡️ Senso di responsabilità
 💪 Capacità di leadership
@@ -187,31 +182,19 @@ Dann werde Teil unseres Teams!";"Cerchiamo un meccanico qualificato (m/f/d) con:
 •💰 Retribuzione commisurata alle prestazioni 
 
 🚀 Ti sembra interessante?
-Allora entra a far parte del nostro team!";gelernten Mechaniker ;Meccanico esperto;autocenterpolin.jpg;;;
-23;YES;Karosseriebau Toni;Karosserielehrling;Apprendista carrozziere;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;348 7250030;Wir suchen einen motivierten Lehrling für unsere Karosseriewerkstatt mit Deutsch- und Italienischkenntnissen.;Cerchiamo un apprendista carrozziere motivato con conoscenza del tedesco e dell'italiano.;Karosserielehrling;Apprendista carrozziere;karosseriebautoni.jpg;;;
-24;YES;Karosseriebau Toni;Lackiererlehrling;Apprendista verniciatore;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;349 7250030;Wir suchen einen motivierten Lackiererlehrling mit Deutsch- und Italienischkenntnissen.;Cerchiamo un apprendista verniciatore motivato con conoscenza del tedesco e dell'italiano.;Lackiererlehrling;Apprendista verniciatore;karosseriebautoni.jpg;;;
-25;YES;Karosseriebau Toni;Hilfsarbeiter;Operario;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;350 7250030;Wir suchen einen motivierten Hilfsarbeiter mit Deutsch- und Italienischkenntnissen.;Cerchiamo un operaio generico motivato con conoscenza del tedesco e dell'italiano.;Hilfsarbeiter;Operario;karosseriebautoni.jpg;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;
+Allora entra a far parte del nostro team!";gelernten Mechaniker ;Meccanico esperto;autocenterpolin.jpg;€ 28.000–34.000 brutto/Jahr, je nach Qualifikation und Erfahrung;€ 28.000–34.000 lordi/anno, in base a qualifica ed esperienza;Metallhandwerk;Contratto collettivo artigianato metalmeccanico;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+23;YES;Karosseriebau Toni;Karosserielehrling (m/w/d);Apprendista carrozziere m/f/d;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;348 7250030;Wir suchen eine motivierte Person für eine Lehrstelle in unserer Karosseriewerkstatt mit Deutsch- und Italienischkenntnissen.;Cerchiamo una persona motivata per un apprendistato nella nostra carrozzeria, con conoscenza del tedesco e dell’italiano.;Karosserielehrling;Apprendista carrozziere;karosseriebautoni.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+24;YES;Karosseriebau Toni;Lackiererlehrling (m/w/d);Apprendista verniciatore m/f/d;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;349 7250030;Wir suchen eine motivierte Person für eine Lehrstelle als Lackierer mit Deutsch- und Italienischkenntnissen.;Cerchiamo una persona motivata per un apprendistato come verniciatore, con conoscenza del tedesco e dell’italiano.;Lackiererlehrling;Apprendista verniciatore;karosseriebautoni.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+25;YES;Karosseriebau Toni;Hilfsarbeiter (m/w/d);Operaio m/f/d;Industriezone 1/B | 39021 Latsch (BZ);Zona industriale 1/B | 39021 Laces (BZ);karosseriebau.toni@rolmail.net;350 7250030;Wir suchen eine motivierte Person als Hilfsarbeiter mit Deutsch- und Italienischkenntnissen.;Cerchiamo una persona motivata per mansioni di supporto in officina, con conoscenza del tedesco e dell’italiano.;Hilfsarbeiter;Operario;karosseriebautoni.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+26;YES;Autoplus ;KFZ-Mechatroniker m/w/d;Tecnico meccatronico (m/f/d);Weingüterweg 1 | 39057 Eppan (BZ);Via Vigneti 1 | 39057 Appiano s.S.d.V. (BZ);h.meraner@autoplus.bz.it ;0471 660455;"Wir suchen ab sofort zur Verstärkung unseres Teams einen KFZ-Mechatroniker-Meister, zweisprachig mit Berufserfahrung für unsere Werkstatt in Eppan. Wir bieten dir » Flexible Arbeitszeiten, eine sehr gute Verdienstmöglichkeit, Fortbildungsmöglichkeiten und ein familiäres Betriebsklima.
+Anforderungen: Berufserfahrung als Kfz-Mechatroniker, Teamfähigkeit, Zweisprachigkeit (Deutsch-Italienisch), Ehrlichkeit und Verlässlichkeit";"Cerchiamo da subito, per rafforzare il nostro team, un maestro meccatronico auto bilingue con esperienza professionale per la nostra officina ad Appiano.
+Ti offriamo orari di lavoro flessibili, ottime possibilità di guadagno, opportunità di formazione e un ambiente di lavoro familiare.
+Requisiti: esperienza professionale come meccatronico auto, capacità di lavorare in team, bilinguismo tedesco-italiano, onestà e affidabilità.";KFZ-Mechatroniker - Fachkraft;Tecnico meccatronico (m/f/d);autoplus.jpg;Bruttogehalt laut geltendem Kollektivvertrag, Einstufung je nach Qualifikation und Erfahrung, ab € 2.200 brutto/Monat. Details werden im persönlichen Gespräch besprochen.;Retribuzione lorda secondo il contratto collettivo vigente, inquadramento in base a qualifica ed esperienza, a partire da € 2.200 lordi/mese. I dettagli saranno discussi durante il colloquio.;geltender Kollektivvertrag;contratto collettivo in vigore;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+27;YES;Karosserie Gross;Karosserietechniker:in / Spengler:in;Tecnico/a di carrozzeria / lattoniere/a;Durrenweg 9 | 39040 Seis am Schlern (BZ);Via Durren 9 | 39040 Siusi allo Scilliar (BZ);info@karosseriegross.it;0471 705304;Ab- und Aufbau/Montage, Spenglerarbeiten, Endkontrolle der Karosseriereparatur sowie Fahrzeugwäsche, Polieren und Pflege.;Smontaggio e montaggio, lavori di lattoneria, controllo finale della riparazione della carrozzeria, lavaggio auto, lucidatura e cura del veic;Lehre / Fachkraft;Apprendistato / operaio qualificato;gross.jpg;die konkrete Einstufung und Entlohnung je nach Qualifikation, Erfahrung und Aufgabenbereich im persönlichen Gespräch festgelegt werden.;l’inquadramento e la retribuzione concreti saranno definiti durante il colloquio in base alla qualifica, all’esperienza e alle mansioni.;nicht angegeben;non idicato;je nach Qualifikation und Erfahrung;in base a qualifica ed esperienza;
+28;;;;;;;;;;;;;;;;;;;;
+29;;;;;;;;;;;;;;;;;;;;
+30;;;;;;;;;;;;;;;;;;;;
+31;;;;;;;;;;;;;;;;;;;;
+32;;;;;;;;;;;;;;;;;;;;
+33;;;;;;;;;;;;;;;;;;;;
+34;;;;;;;;;;;;;;;;;;;;
