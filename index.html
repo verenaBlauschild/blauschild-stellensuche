@@ -297,6 +297,19 @@
               ? (job["Stellenbeschreibung_DE"] || "")
               : (job["Stellenbeschreibung_IT"] || "");
 
+            const gehalt = currentLang === "de"
+  ? (job["Gehalt_DE"] || "")
+  : (job["Gehalt_IT"] || "");
+
+const kollektiv = currentLang === "de"
+  ? (job["Kollektivvertrag_DE"] || "")
+  : (job["Kollektivvertrag_IT"] || "");
+
+const einstufung = currentLang === "de"
+  ? (job["Einstufung_DE"] || "")
+  : (job["Einstufung_IT"] || "");
+
+const applyLink = (job["apply_link"] || "").trim();
             const extra = currentLang === "de"
               ? (job["extra_DE"] || "")
               : (job["extra_IT"] || "");
@@ -339,8 +352,31 @@
               </div>
 
               <div class="location">${location.replace(/\n/g,"<br>")}</div>
-              ${extra ? `<div class="extra">${extra}</div>` : ""}
-              <div class="description">${description.replace(/\n/g,"<br>")}</div>
+
+${gehalt ? `
+  <div style="margin-top:10px;">
+    <strong>${currentLang === "de" ? "Bruttogehalt" : "Retribuzione lorda"}</strong><br>
+    ${gehalt.replace(/\n/g,"<br>")}
+  </div>
+` : ""}
+
+${kollektiv ? `
+  <div style="margin-top:10px;">
+    <strong>${currentLang === "de" ? "Kollektivvertrag" : "Contratto collettivo"}</strong><br>
+    ${kollektiv.replace(/\n/g,"<br>")}
+  </div>
+` : ""}
+
+${einstufung ? `
+  <div style="margin-top:10px;">
+    <strong>${currentLang === "de" ? "Einstufung" : "Inquadramento"}</strong><br>
+    ${einstufung.replace(/\n/g,"<br>")}
+  </div>
+` : ""}
+
+${extra ? `<div class="extra" style="margin-top:10px;">${extra}</div>` : ""}
+
+<div class="description">${description.replace(/\n/g,"<br>")}</div>
 
               ${email ? `<a class="button" href="mailto:${email}">${buttonText}</a>` : ""}
 
