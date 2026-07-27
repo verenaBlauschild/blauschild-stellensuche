@@ -336,7 +336,57 @@ function extractCity(location) {
           container.innerHTML = "";
 
           let visible = 0;
+const cityFilter = document.getElementById("cityFilter");
+const selectedCity = cityFilter.value;
 
+const activeJobs = parsed.data.filter(job => {
+  const aktiv = (job["Aktiv"] || "")
+    .toString()
+    .trim()
+    .toLowerCase();
+
+  return aktiv === "yes" || aktiv === "ja";
+});
+
+const cities = new Map();
+
+activeJobs.forEach(job => {
+  const cityKey = extractCity(job["Ort"] || "");
+
+  const cityLabel = extractCity(
+    currentLang === "de"
+      ? (job["Ort"] || "")
+      : (job["Ort_IT"] || job["Ort"] || "")
+  );
+
+  if (cityKey) {
+    cities.set(cityKey, cityLabel || cityKey);
+  }
+});
+
+cityFilter.innerHTML = `
+  <option value="">
+    ${currentLang === "de" ? "Alle Orte" : "Tutte le località"}
+  </option>
+`;
+
+[...cities.entries()]
+  .sort((a, b) =>
+    a[1].localeCompare(
+      b[1],
+      currentLang === "de" ? "de" : "it"
+    )
+  )
+  .forEach(([cityKey, cityLabel]) => {
+    const option = document.createElement("option");
+    option.value = cityKey;
+    option.textContent = cityLabel;
+    cityFilter.appendChild(option);
+  });
+
+if (cities.has(selectedCity)) {
+  cityFilter.value = selectedCity;
+}
           parsed.data.forEach(job => {
             const aktiv = (job["Aktiv"] || "").toString().trim().toLowerCase();
             if (aktiv !== "yes" && aktiv !== "ja") return;
